@@ -40,16 +40,14 @@ export default {
       <h1
         class="font-general-semibold text-3xl md:text-3xl xl:text-4xl text-center text-gray-200 uppercase"
       >
-        WELCOME TO
-        <span class="text-color font-general-semibold">NIGERIA! </span>
+        Accelerate software delivery with
+        <span class="text-color font-general-semibold">Nreliable </span>deployments
       </h1>
       <p
         class="font-general-regular mt-2 text-lg sm:text-xl xl:text-lg text-center leading-none text-gray-200"
       >
-        Take a walk along the longest canopy in Africa. From Monkeys to the beautiful
-        Peacock, crocodiles, snakes, and other wild animals, you will see all these at
-        this reserve. You will also enjoy the beautiful scenery of all the different
-        species of plants.
+        Octopus automates complex deployments and seamlessly integrates with your DevOps
+        tools.
       </p>
       <div class="justify-center w-auto items-center text-center sm:block mt-12">
         <!-- <div> 
@@ -63,9 +61,7 @@ export default {
   </div>
  -->
 
-        <!-- <a
-          download="Resume.pdf"
-          href="mailto: kufreabasibassey3@gmail.com"
+        <a
           class="justify-center items-center w-36 sm:w-48 m-2 mt-12 mb-6 sm:mb-0 text-lg btn py-2.5 px-5 sm:py-3 rounded-sm focus:ring-1 duration-500"
           aria-label=""
           te
@@ -74,24 +70,23 @@ export default {
             data-feather="arrow-down-circle"
             class="ml-0 sm:ml-1 mr-2 sm:mr-3 w-5 sm:w-6 duration-100"
           ></i>
-          <span class="text-sm sm:text-lg font-general-medium duration-100"
-            >Hire Me</span
+          <span class="text-sm sm:text-lg font-general-medium duration-100">
+            Start a trial</span
           ></a
         >
         <a
           download="Resume.pdf"
-          href="https://docs.google.com/document/d/1ZgPdnedCb9-ziI0U1D7t9by6VhxMmkMF4eXwTlEFrM8/edit#heading=h.y7d3xdxnr44m"
           class="justify-center items-center w-36 sm:w-48 mt-12 mb-6 sm:mb-0 text-lg btn py-2.5 px-5 sm:py-3 rounded-sm focus:ring-1 duration-500"
           aria-label="Download Resume"
         >
           <i
-						data-feather="arrow-down-circle"
-						class= "ml-0 sm:ml-1 mr-2 sm:mr-3 w-5 sm:w-6 duration-100"
-					></i>
+            data-feather="arrow-down-circle"
+            class="ml-0 sm:ml-1 mr-2 sm:mr-3 w-5 sm:w-6 duration-100"
+          ></i>
           <span class="text-sm sm:text-lg font-general-medium duration-100"
-            >Resume</span
+            >Schedule a Demo</span
           ></a
-        > -->
+        >
       </div>
     </div>
     <div></div>

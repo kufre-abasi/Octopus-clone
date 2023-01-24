@@ -19,7 +19,7 @@ export default {
 </script>
 
 <template>
-  <div class="pt-10" :class="containerClasses">
+  <div class="pt-10">
     <!-- Banner -->
     <AppBanner class="mb-10 sm:mb-20 container" />
 

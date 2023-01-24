@@ -3,7 +3,7 @@ import feather from "feather-icons";
 import AppHeader from "./components/shared/AppHeader";
 import AppFooter from "./components/shared/AppFooter";
 // import AboutMe from "./views/About.vue";
-// import Home from "./views/Home.vue";
+import Home from "./views/Home.vue";
 // import Contact from "./views/Contact.vue";
 // import ProjectsGrid from "./views/Projects.vue";
 // import Skills from "./components/skills/Skills.vue";
@@ -15,7 +15,7 @@ export default {
     AppFooter,
     // PageLoader,
     // AboutMe,
-    // Home,
+    Home,
     // Contact,
     // ProjectsGrid,
     // Skills,
@@ -38,7 +38,7 @@ export default {
   <div id="app" class="pt-0.5">
     <!-- <PageLoader /> -->
     <AppHeader />
-    <!-- <Home /> -->
+    <Home />
     <!-- <AboutMe /> -->
     <!-- <Skills /> -->
     <!-- <ProjectsGrid /> -->
