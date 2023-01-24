@@ -71,20 +71,24 @@ export default {
 </script>
 
 <template>
-  <nav
-    id="nav"
-    class="shadow-xl fixed top-0 z-10 bg-primary-dark bg-opacity-30 md:px-20 px-10 w-full"
-  >
+  <nav id="nav" class="shadow-xl fixed top-0 z-10 bg-primary-light my-2 p-0w  -full">
     <!-- Header start -->
     <div
-      class="z-10 py-2 sm:py-0 max-w-screen-lg xl:max-w-screen-xl block sm:flex sm:justify-between md:my-2 sm:items-center items-center"
+      class="z-10 max-w-screen-lg container md:mx-5 p-0 xl:max-w-screen-xl block sm:flex sm:justify-between sm:items-center items-center"
     >
       <!-- Header menu links and small screen hamburger menu -->
       <div class="flex justify-between items-center">
         <!-- Header logos -->
         <div>
-          <router-link to="/">
-            <img src="@/assets/images/logoss.png " alt="" class="logo" />
+          <router-link class="flex" to="/">
+            <img
+              src="@/assets/images/octupos/octopus_deploy_logo.png "
+              alt=""
+              class="logo"
+            />
+            <h1 class="text-text-tertiary mt-5 pt-1 items-center text-left">
+              Octopus Deploy
+            </h1>
 
             <!--	<img
 							v-if="theme === 'light'"
@@ -178,7 +182,7 @@ export default {
   @apply font-medium;
 }
 .logo {
-  width: 25%;
+  width: 28%;
 }
 @media only screen and (max-width: 425px) {
   .logo {
