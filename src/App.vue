@@ -47,7 +47,7 @@ export default {
 
     <!-- Render active component contents with vue transition -->
     <!-- <transition name="fade" mode="out-in"> -->
-    <router-view />
+    <!-- <router-view /> -->
     <!-- </transition> -->
 
     <AppFooter />
