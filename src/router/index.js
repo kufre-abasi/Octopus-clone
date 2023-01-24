@@ -7,7 +7,7 @@ const routes = [
 		name: 'Defult',
 		component: Defult,
 		meta: {
-			title: 'Tribal-Gateway - Home',
+			title: 'Continous delivery & depolyments automation Deploy - Octopus Deploy',
 		},
 	},
 	{
