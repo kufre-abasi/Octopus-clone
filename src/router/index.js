@@ -19,7 +19,7 @@ const routes = [
 		component: () =>
 			import(/* webpackChunkName: "about" */ '../views/Resort.vue'),
 		meta: {
-			title: 'Tribal-Gateway - Resort Form',
+			title: 'Continous delivery & depolyments automation Deploy - Octopus Deploy',
 		},
 	},
 	{
@@ -31,7 +31,7 @@ const routes = [
 		component: () =>
 			import(/* webpackChunkName: "about" */ '../views/Relocate.vue'),
 		meta: {
-			title: 'Tribal-Gateway - Relocate Form',
+			title: 'Continous delivery & depolyments automation Deploy - Octopus Deploy',
 		},
 	},
 
@@ -44,7 +44,7 @@ const routes = [
 		component: () =>
 			import(/* webpackChunkName: "about" */ '../views/About.vue'),
 		meta: {
-			title: 'Tribal-Gateway - About',
+			title: 'Continous delivery & depolyments automation Deploy - Octopus Deploy',
 		},
 	},
 	{
@@ -56,7 +56,7 @@ const routes = [
 		component: () =>
 			import(/* webpackChunkName: "projects" */ '../views/Projects.vue'),
 		meta: {
-			title: 'Tribal-Gateway - Projects',
+			title: 'Continous delivery & depolyments automation Deploy - Octopus Deploy',
 		},
 	},
 	{
@@ -70,7 +70,7 @@ const routes = [
 				/* webpackChunkName: "projects" */ '../views/SingleProject.vue'
 			),
 		meta: {
-			title: 'Tribal-Gateway - Single Project',
+			title: 'Continous delivery & depolyments automation Deploy - Octopus Deploy',
 		},
 	},
 	{
@@ -82,7 +82,7 @@ const routes = [
 		component: () =>
 			import(/* webpackChunkName: "projects" */ '../views/Contact.vue'),
 		meta: {
-			title: 'Tribal-Gateway - Contact',
+			title: 'Continous delivery & depolyments automation Deploy - Octopus Deploy',
 		},
 	},
 ];
