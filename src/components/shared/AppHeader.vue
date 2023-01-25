@@ -85,7 +85,7 @@ export default {
               class="logo"
             />
             <h1
-              class="text-text-tertiary font-general-medium text-xl my-2 py-1 items-center text-left"
+              class="text-gray-700 font-general-medium text-xl my-2 py-1 items-center text-left"
             >
               Octopus Deploy
             </h1>
@@ -117,7 +117,7 @@ export default {
           <button
             @click="isOpen = !isOpen"
             type="button"
-            class="focus:outline-none"
+            class="focus:outline-none bg-gray-200"
             aria-label="Hamburger Menu"
           >
             <svg

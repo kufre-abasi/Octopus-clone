@@ -34,55 +34,49 @@ export default {
 </script>
 
 <template>
-  <section class="sm:flex-row my-30 sm:my-30 md:h-96 sm:h-96 h-86 w-auto py-40">
+  <section
+    class="sm:flex-row  w-auto   py-60 md:py-50 "
+  >
     <!-- Banner left contents -->
-    <div class="w-auto md:w-auto text-center">
-      <h1
-        class="font-general-semibold text-3xl md:text-3xl xl:text-4xl text-center text-gray-200 uppercase"
-      >
-        Accelerate software delivery with
-        <span class="text-color font-general-semibold">Nreliable </span>deployments
+    <div class="w-auto md:w-auto text-center md:mx-28 md:mt-0 mt-20 pt-10 md:pt-0 px-5">
+      <h1 class="font-general-semibold heading text-center md:text-5xl text-3xl text-gray-100">
+        Accelerate software delivery 
+        <br class="md:show"/>
+        with
+        <span class="focus-text">reliable </span> deployments
       </h1>
+      <div class="mt-4 text-center">
       <p
-        class="font-general-regular mt-2 text-lg sm:text-xl xl:text-lg text-center leading-none text-gray-200"
+        class="font-general-regular  para "
       >
-        Octopus automates complex deployments and seamlessly integrates with your DevOps
+        Octopus automates complex deployments and seamlessly   
+             <br class="md:show"/>
+ integrates with your DevOps
         tools.
       </p>
-      <div class="justify-center w-auto items-center text-center sm:block mt-12">
-        <!-- <div> 
-    <button @click="downloadPDF">Print Download</button>
-    <VueHtml2pdf :manual-pagination="true" :enable-download="true" ref="DownloadComp">
-      <section slot="pdf-content">
-            <Download />
-        </section>
-    </VueHtml2pdf>
-    
-  </div>
- -->
+      </div>
+      <div class="justify-center  md:mx-64 mx-1 mt-10 items-center text-center grid grid-cols-1 md:grid-cols-2 gap-5 md:gap-5 ">
 
         <a
-          class="justify-center items-center w-36 sm:w-48 m-2 mt-12 mb-6 sm:mb-0 text-lg btn py-2.5 px-5 sm:py-3 rounded-sm focus:ring-1 duration-500"
+          class="justify-center items-center text-sm bg-accent-primary cry90 bttn "
           aria-label=""
           te
         >
-          <i
+          <!-- <i
             data-feather="arrow-down-circle"
             class="ml-0 sm:ml-1 mr-2 sm:mr-3 w-5 sm:w-6 duration-100"
-          ></i>
+          ></i> -->
           <span class="text-sm sm:text-lg font-general-medium duration-100">
             Start a trial</span
           ></a
         >
         <a
-          download="Resume.pdf"
-          class="justify-center items-center w-36 sm:w-48 mt-12 mb-6 sm:mb-0 text-lg btn py-2.5 px-5 sm:py-3 rounded-sm focus:ring-1 duration-500"
-          aria-label="Download Resume"
+        class="justify-center items-center   text-sm text-gray-100 border-2 bttn "
         >
-          <i
+          <!-- <i
             data-feather="arrow-down-circle"
             class="ml-0 sm:ml-1 mr-2 sm:mr-3 w-5 sm:w-6 duration-100"
-          ></i>
+          ></i> -->
           <span class="text-sm sm:text-lg font-general-medium duration-100"
             >Schedule a Demo</span
           ></a
@@ -90,11 +84,8 @@ export default {
       </div>
     </div>
     <div></div>
-    <!-- Banner right illustration -->
-    <!-- <div class="w-full flex-col md:w-1/4 text-right float-right">
-      <img v-if="theme === 'light'" src="@/assets/images/developer.svg" alt="Developer" />
-      <img v-else src="@/assets/images/developer-dark.svg" alt="Developer" />
-    </div> -->
+    <!-- animation-container -->
+    <div class="w-full my-10"><div>animation section</div></div>
   </section>
 </template>
 
@@ -105,13 +96,6 @@ export default {
     /* height: 50%; */
   }
 }
-.btn {
-  background: #022c0c;
-  color: #fdfdfd;
-}
-.btn:hover {
-  background: #3cff76;
-}
 .cutom-border {
   border: 30% 70% 70% 30% / 30% 30% 70% 70%;
 }
@@ -121,4 +105,43 @@ export default {
   text-shadow: #fcfdfd 2px;
   /* -webkit-text-stroke: 0.25px #3cff76; */
 }
+.focus-text {
+  -webkit-text-fill-color: transparent;
+  background: -webkit-linear-gradient(180deg, #76baed, #76f5a9);
+  -webkit-background-clip: text;
+  display: inline-block;
+  -moz-transition: width 0.15s ease-in-out, left 0.15s ease-in-out;
+  -webkit-transition: width 0.15s ease-in-out, left 0.15s ease-in-out;
+  -o-transition: width 0.15s ease-in-out, left 0.15s ease-in-out;
+  transition: width 0.15s ease-in-out, left 0.15s ease-in-out;
+}
+.bttn {
+  border-radius: 36px;
+    font-weight: 400;
+    line-height: 22px;
+    padding: 14px 0px;
+    transition: background .25s,color .25s,filter .25s;
+    /* background:#00b065; */
+    border-color: #00ffa3;
+}
+.cry90{    color: #113049;
+}
+.heading  {
+/* font-size: 48px; */
+line-height: 1.4em;
+font-weight: 400;
+/* font-family: Roboto,Helvetica Neue,Helvetica,Arial,sans-serif; */
+}
+.para{
+  display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-size: 20px;
+    color:#a9bbcb;
+    line-height: 1.3em;
+
+}
+
 </style>
