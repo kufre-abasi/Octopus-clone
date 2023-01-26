@@ -33,7 +33,7 @@ export default {
 </script>
 
 <template>
-  <div class="py-20">
+  <div class="py-20 mx-8 md:mx-24">
     <div class="eyebrow heading-center">
       <div class="gradient-border">
         <div class="eyebrow-heading" alt="">AUTOMATE</div>
@@ -72,8 +72,12 @@ Make any
         >
           {{ bio.bio }}
         </p>
-        <a class="dir underlined-arrow">Learn more <svg width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5.41999 0.915365L6.03044 0.291039C6.28892 0.0266849 6.70689 0.0266849 6.96262 0.291039L12.3082 5.7553C12.5667 6.01965 12.5667 6.44712 12.3082 6.70866L6.96262 12.1757C6.70414 12.4401 6.28617 12.4401 6.03044 12.1757L5.41999 11.5514C5.15876 11.2842 5.16426 10.8483 5.43099 10.5868L8.74449 7.3583H0.84159C0.475868 7.3583 0.181641 7.05739 0.181641 6.68335V5.78342C0.181641 5.40939 0.475868 5.10848 0.84159 5.10848H8.74449L5.43099 1.87998C5.16151 1.61844 5.15601 1.18253 5.41999 0.915365Z" fill="currentColor"></path></svg></a>
+        <div class=" ">
+          <a class="dir underlined-arrow flex-row flex p-0">Learn more <svg class="my-1 mx-1" width="14" height="14" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5.41999 0.915365L6.03044 0.291039C6.28892 0.0266849 6.70689 0.0266849 6.96262 0.291039L12.3082 5.7553C12.5667 6.01965 12.5667 6.44712 12.3082 6.70866L6.96262 12.1757C6.70414 12.4401 6.28617 12.4401 6.03044 12.1757L5.41999 11.5514C5.15876 11.2842 5.16426 10.8483 5.43099 10.5868L8.74449 7.3583H0.84159C0.475868 7.3583 0.181641 7.05739 0.181641 6.68335V5.78342C0.181641 5.40939 0.475868 5.10848 0.84159 5.10848H8.74449L5.43099 1.87998C5.16151 1.61844 5.15601 1.18253 5.41999 0.915365Z" fill="currentColor"></path></svg></a>
+        <hr class="bg-cl w-1/6 "/>
+        </div>      
       </div>
+
       <!-- About profile image -->
       <img
         src="@/assets/images/octupos/process-3.png"
@@ -130,11 +134,16 @@ Make any
 }
 .underlined-arrow {
     color: #1fc0ff;
-    padding-bottom: 8px;
+    /* padding-bottom: 8px; */
     position: relative;
+    /* border-bottom: solid 2px #1fc0ff; */
   }
   svg {
     overflow: hidden;
     vertical-align: middle;
+}
+.bg-cl{
+  border-color: #1fc0ff;
+border-top-width: 3px;
 }
 </style>

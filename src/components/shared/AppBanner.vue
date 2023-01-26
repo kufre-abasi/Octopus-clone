@@ -37,6 +37,8 @@ export default {
   <section
     class="sm:flex-row  w-auto   py-60 md:py-50 "
   >
+  <div class="page-highlight left"></div>
+  <div class="page-highlight right"></div>
     <!-- Banner left contents -->
     <div class="w-auto md:w-auto text-center  md:mt-0 mt-20 pt-10 md:pt-0 ">
       <h1 class="font-general-semibold heading text-center md:text-5xl text-3xl text-gray-100">
@@ -86,9 +88,9 @@ export default {
     <div></div>
     <!-- animation-container -->
     <div class="w-full my-10">
-      <lottie-player src="https://octopus.com/octopus-public/animations/hero-cicd-pipeline-animation.json" autoplay="" loop="" speed="1" intermission="1" class=" hide-sm hide-xs " style="margin-top: 0px;" background="transparent">
-      
-</lottie-player>
+      <!-- <lottie-player src="https://octopus.com/octopus-public/animations/hero-cicd-pipeline-animation.json" autoplay="" loop="" speed="1" intermission="1" class=" hide-sm hide-xs " style="margin-top: 0px;" background="transparent">
+
+</lottie-player> -->
 
       <div>animation section</div>
       <div class="hide">      
@@ -159,5 +161,34 @@ font-weight: 400;
 .hide{
 display: none;
 }
+@media (min-width: 992px){
+.page-highlight.left {
+    width: 578px;
+}}
+.page-highlight.left {
+    height: 920px;
+    left: 0;
+}
+.page-highlight {
+    background: radial-gradient(at 0 0,rgba(0,62,107,.4) 35%,#00000000 70%);
+    position: absolute;
+    top: 0;
+    width: 50%;
+}
 
+@media  (min-width: 992px){
+.page-highlight.right {
+    width: 50%;
+}}
+.page-highlight.right {
+    height: 782px;
+    right: 0;
+    transform: matrix(-1,0,0,1,0,0);
+}
+.page-highlight {
+    background: radial-gradient(at 0 0,rgba(0,62,107,.4) 35%,#00000000 70%);
+    position: absolute;
+    top: 0;
+    width: 50%;
+}
 </style>

@@ -35,7 +35,7 @@ export default {
 </script>
 
 <template>
-  <div id="app" class="pt-0.5 bg-background-gradient-end">
+  <div id="app" class="pt-0.5 bg-background-primary">
     <!-- <PageLoader /> -->
     <AppHeader />
     <Home />

@@ -11,7 +11,7 @@ export default {
   <!-- Header links -->
   <div
     :class="isOpen ? 'block' : 'hidden'"
-    class="m-0 sm:ml-4 sm:flex p-5 sm:p-0 justify-center items-center shadow-b-lg sm:shadow-b-lg"
+    class="m-0 sm:ml-4 lg:flex p-5 sm:p-0 justify-center items-center shadow-b-lg sm:shadow-b-lg"
   >
     <router-link
       to="/"
@@ -51,8 +51,8 @@ export default {
       >Enterprice</router-link
     >
 
-    <div class="md:flex block ml-xl-3  my-xl-auto">
-      <span class="text-md font-general-medium px-8 py-3 "> Sign in </span>
+    <div class="grid grid-cols-1 sm:grid-cols-2  sm:gap-1 ml-xl-3  my-xl-auto">
+      <span class="text-md font-general-medium px-0 py-3 "> Sign in </span>
       <span class="font-general-medium text-sm text-gray-100 bTn ">
         Start a trial
       </span>
@@ -80,7 +80,7 @@ export default {
     border-radius: 36px;
     font-weight: 700;
     line-height: 22px;
-    padding: 14px 40px;
+    padding: 14px 25px;
     transition: background .25s,color .25s,filter .25s;
     background:#00b065;
 }

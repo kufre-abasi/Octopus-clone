@@ -18,7 +18,7 @@ export default {
       headings: [
         {
           id: 1,
-          heading: "How Octopus works",
+          heading: "Thousands of organizations automate their <br /> software delivery with Octopus Deploy",
         },
       ],
       authorname: [
@@ -33,20 +33,18 @@ export default {
 </script>
 
 <template>
-  <div class="py-20">
+  <div class="py-20 mx-8 md:mx-24">
     <div class="eyebrow heading-center">
       <div class="gradient-border">
-        <div class="eyebrow-heading" alt="">PRODUCT TOUR</div>
+        <div class="eyebrow-heading" alt="">CUSTOMERS</div>
       </div>
     </div>
 
     <h1
       class="text-2xl text-gray-100 sm:text-4xl font-semibold mb-5 mt-4 text-center font-general-medium md:text-3xl leading-none"
-      v-for="heading in headings"
-      :key="heading.id"
     >
-      {{ heading.heading }}
-    </h1>
+    Thousands of organizations automate their <br/> software delivery with Octopus Deploy
+        </h1>
     <!-- <p class="font-general-regular  text-text-secondary mt-4 text-lg">
       Octopus understands the full deployment journey in ways few other tools do.             
        <br class="md:show"/>

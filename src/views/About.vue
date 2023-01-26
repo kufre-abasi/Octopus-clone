@@ -37,7 +37,7 @@ export default {
 <template>
   <div class="">
     <!-- About me -->
-    <div class="mx-8 md:mx-24">
+    <div class="">
       <Step1 />
       <Step2 />
       <Step3 />

@@ -113,17 +113,17 @@ export default {
 				/> -->
 
         <!-- Small screen hamburger menu -->
-        <div class="sm:hidden">
+        <div class="lg:hidden">
           <button
             @click="isOpen = !isOpen"
             type="button"
-            class="focus:outline-none bg-gray-200"
+            class="focus:outline-none Hamburger_Menu border-2 rounded-sm bg-gray-200"
             aria-label="Hamburger Menu"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 24 24"
-              class="h-7 w-7 fill-current bg-octo-background-grey"
+              class="h-7 w-7 fill-current "
             >
               <path
                 v-if="isOpen"
@@ -190,5 +190,9 @@ export default {
     width: 20%;
     height: 20%;
   }
+}
+.Hamburger_Menu{
+  color: rgba(0,0,0,.5);
+  border-color: rgba(0,0,0,.1);
 }
 </style>
