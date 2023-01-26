@@ -19,7 +19,7 @@ export default {
 </script>
 
 <template>
-  <div class="">
+  <div class="mx-8 md:mx-24">
     <!-- Banner -->
     <AppBanner class="" />
 

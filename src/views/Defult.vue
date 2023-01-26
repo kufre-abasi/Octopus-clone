@@ -1,6 +1,6 @@
 <script>
 import AppBanner from "@/components/shared/AppBannerM";
-import AboutUs from "../components/about/About.vue";
+import AboutUs from "../components/about/Step2.vue";
 import ProjectsGrid from "../components/projects/ProjectsGrid.vue";
 // import Button from '../components/reusable/Button.vue';
 import ContactUs from "./ContactUs.vue";

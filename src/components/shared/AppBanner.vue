@@ -38,7 +38,7 @@ export default {
     class="sm:flex-row  w-auto   py-60 md:py-50 "
   >
     <!-- Banner left contents -->
-    <div class="w-auto md:w-auto text-center md:mx-28 md:mt-0 mt-20 pt-10 md:pt-0 px-5">
+    <div class="w-auto md:w-auto text-center  md:mt-0 mt-20 pt-10 md:pt-0 ">
       <h1 class="font-general-semibold heading text-center md:text-5xl text-3xl text-gray-100">
         Accelerate software delivery 
         <br class="md:show"/>
@@ -85,7 +85,20 @@ export default {
     </div>
     <div></div>
     <!-- animation-container -->
-    <div class="w-full my-10"><div>animation section</div></div>
+    <div class="w-full my-10">
+      <lottie-player src="https://octopus.com/octopus-public/animations/hero-cicd-pipeline-animation.json" autoplay="" loop="" speed="1" intermission="1" class=" hide-sm hide-xs " style="margin-top: 0px;" background="transparent">
+      
+</lottie-player>
+
+      <div>animation section</div>
+      <div class="hide">      
+        <img
+        src="@/assets/images/octupos/draft-home-hero-graphic-mobile.svg"
+        class=" mt-5 sm:mb-0 sm:mt-10"
+        alt=""
+      />
+</div>
+</div>
   </section>
 </template>
 
@@ -142,6 +155,9 @@ font-weight: 400;
     color:#a9bbcb;
     line-height: 1.3em;
 
+}
+.hide{
+display: none;
 }
 
 </style>
