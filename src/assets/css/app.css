@@ -217,6 +217,6 @@ body {
 /* Active class for navigation menu */
 .router-link-active,
 .router-link-exact-active {
-	@apply text-gray-200;
-	@apply text-gray-200 dark:text-gray-200;
+	@apply text-gray-800;
+	@apply text-gray-800 dark:text-gray-200;
 }

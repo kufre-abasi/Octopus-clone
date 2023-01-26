@@ -71,11 +71,9 @@ export default {
 </script>
 
 <template>
-  <nav id="nav" class="shadow-xl fixed top-0 z-10 bg-primary-light my-2 p-0w  -full">
+  <nav id="nav" class="shadow-xl navbar fixed top-0 z-10 bg-primary-light py-2 w-full">
     <!-- Header start -->
-    <div
-      class="z-10 max-w-screen-lg container md:mx-5 p-0 xl:max-w-screen-xl block sm:flex sm:justify-between sm:items-center items-center"
-    >
+    <div class="md:mx-28 px-5 block sm:flex">
       <!-- Header menu links and small screen hamburger menu -->
       <div class="flex justify-between items-center">
         <!-- Header logos -->
@@ -86,7 +84,9 @@ export default {
               alt=""
               class="logo"
             />
-            <h1 class="text-text-tertiary mt-5 pt-1 items-center text-left">
+            <h1
+              class="text-gray-700 font-general-medium text-xl my-2 py-1 items-center text-left"
+            >
               Octopus Deploy
             </h1>
 
@@ -113,17 +113,17 @@ export default {
 				/> -->
 
         <!-- Small screen hamburger menu -->
-        <div class="sm:hidden">
+        <div class="lg:hidden">
           <button
             @click="isOpen = !isOpen"
             type="button"
-            class="focus:outline-none"
+            class="focus:outline-none Hamburger_Menu border-2 rounded-sm bg-gray-200"
             aria-label="Hamburger Menu"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 24 24"
-              class="h-7 w-7 fill-current text-primary"
+              class="h-7 w-7 fill-current "
             >
               <path
                 v-if="isOpen"
@@ -182,11 +182,17 @@ export default {
   @apply font-medium;
 }
 .logo {
-  width: 28%;
+  width: 15%;
+  height: 15%;
 }
 @media only screen and (max-width: 425px) {
   .logo {
-    width: 50%;
+    width: 20%;
+    height: 20%;
   }
+}
+.Hamburger_Menu{
+  color: rgba(0,0,0,.5);
+  border-color: rgba(0,0,0,.1);
 }
 </style>

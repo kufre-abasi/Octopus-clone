@@ -2,8 +2,8 @@
 import feather from "feather-icons";
 import AppHeader from "./components/shared/AppHeader";
 import AppFooter from "./components/shared/AppFooter";
-// import AboutMe from "./views/About.vue";
-// import Home from "./views/Home.vue";
+import AboutMe from "./views/About.vue";
+import Home from "./views/Home.vue";
 // import Contact from "./views/Contact.vue";
 // import ProjectsGrid from "./views/Projects.vue";
 // import Skills from "./components/skills/Skills.vue";
@@ -14,8 +14,8 @@ export default {
     AppHeader,
     AppFooter,
     // PageLoader,
-    // AboutMe,
-    // Home,
+    AboutMe,
+    Home,
     // Contact,
     // ProjectsGrid,
     // Skills,
@@ -35,11 +35,11 @@ export default {
 </script>
 
 <template>
-  <div id="app" class="pt-0.5">
+  <div id="app" class="pt-0.5 bg-background-primary">
     <!-- <PageLoader /> -->
     <AppHeader />
-    <!-- <Home /> -->
-    <!-- <AboutMe /> -->
+    <Home />
+    <AboutMe />
     <!-- <Skills /> -->
     <!-- <ProjectsGrid /> -->
     <!-- <Contact /> -->

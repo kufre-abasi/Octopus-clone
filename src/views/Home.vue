@@ -19,9 +19,9 @@ export default {
 </script>
 
 <template>
-  <div class="pt-10" :class="containerClasses">
+  <div class="mx-8 md:mx-24">
     <!-- Banner -->
-    <AppBanner class="mb-10 sm:mb-20 container" />
+    <AppBanner class="" />
 
     <!-- Projects -->
     <!-- <ProjectsGrid /> -->
