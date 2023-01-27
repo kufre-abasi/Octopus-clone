@@ -57,10 +57,10 @@ export default {
         tools.
       </p>
       </div>
-      <div class="justify-center  md:mx-64 mx-1 mt-10 items-center text-center grid grid-cols-1 md:grid-cols-2 gap-5 md:gap-5 ">
-
-        <a
-          class="justify-center items-center text-sm bg-accent-primary cry90 bttn "
+      <div class="justify-center  md:mx-64 mx-1 mt-10 items-center text-center grid grid-cols-1 md:grid-cols-2 gap-0 md:gap-0 ">
+        <!-- <div class="justify-right items-right"> -->
+          <a
+          class=" mx-0 text-sm bg-accent-primary cry90 bttn "
           aria-label=""
           te
         >
@@ -72,8 +72,10 @@ export default {
             Start a trial</span
           ></a
         >
-        <a
-        class="justify-center items-center   text-sm text-gray-100 border-2 bttn "
+        <!-- </div>
+        <div class="justify-left items-left"> -->
+          <a
+        class="   text-sm text-gray-100 border-2 bttn "
         >
           <!-- <i
             data-feather="arrow-down-circle"
@@ -83,6 +85,7 @@ export default {
             >Schedule a Demo</span
           ></a
         >
+        <!-- </div> -->
       </div>
     </div>
     <div></div>
@@ -138,8 +141,10 @@ export default {
     transition: background .25s,color .25s,filter .25s;
     /* background:#00b065; */
     border-color: #00ffa3;
+    width: 50%;
 }
-.cry90{    color: #113049;
+.cry90{   
+   color: #113049;
 }
 .heading  {
 /* font-size: 48px; */

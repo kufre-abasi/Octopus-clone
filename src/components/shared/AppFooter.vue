@@ -59,7 +59,7 @@ export default {
 </script>
 
 <template>
-  <div class="bg-text-primary px-10 sm:px-36 mb-10">
+  <div class="bg-text-primary px-10 sm:px-36 ">
     <div
       class="pt-20 sm:pt-30 mt-20 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 mt-6   sm:gap-6"
     >
