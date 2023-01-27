@@ -71,17 +71,9 @@ export default {
 </script>
 
 <template>
-<<<<<<< HEAD
-  <nav id="nav" class="shadow-xl fixed-top navbar top-0 z-10 bg-primary-light my-2 p-0 w-full">
-    <!-- Header start -->
-    <div
-      class="z-10 max-w-screen-lg container mx-5 p-0 xl:max-w-screen-xl block sm:flex sm:justify-between sm:items-center items-center"
-    >
-=======
   <nav id="nav" class="shadow-xl navbar fixed top-0 z-10 bg-primary-light py-2 w-full">
     <!-- Header start -->
     <div class="md:mx-28 px-5 block sm:flex">
->>>>>>> 13c6c70df667bc1f4bcbee7953fef44bb172e1df
       <!-- Header menu links and small screen hamburger menu -->
       <div class="flex justify-between items-center">
         <!-- Header logos -->
@@ -91,18 +83,10 @@ export default {
               src="@/assets/images/octupos/octopus_deploy_logo.png "
               alt=""
               class="logo"
-            />
-<<<<<<< HEAD
-            <h1 class="text-text-tertiary mt-5 pt-1 items-center font-general-medium  text-left text-xl font-medium ">
-=======
-            <h1
-              class="text-gray-700 font-general-medium text-xl my-2 py-1 items-center text-left"
-            >
->>>>>>> 13c6c70df667bc1f4bcbee7953fef44bb172e1df
+            /> <h1>
               Octopus Deploy
             </h1>
-
-            <!--	<img
+						<img
 							v-if="theme === 'light'"
 							src="@/assets/images/K1.png"
 							class="w-36"
@@ -194,12 +178,7 @@ export default {
   @apply font-medium;
 }
 .logo {
-<<<<<<< HEAD
   width: 25%;
-=======
-  width: 15%;
-  height: 15%;
->>>>>>> 13c6c70df667bc1f4bcbee7953fef44bb172e1df
 }
 @media only screen and (max-width: 425px) {
   .logo {
