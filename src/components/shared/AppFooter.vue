@@ -1,10 +1,12 @@
 <script>
 import feather from "feather-icons";
 import FooterCopyright from "./FooterCopyright.vue";
-import Button from "../reusable/Button.vue";
+// import Button from "../reusable/Button.vue";
 
 export default {
-  components: { FooterCopyright, Button },
+  components: { FooterCopyright,
+    //  Button
+   },
   data() {
     return {
       socials: [
@@ -57,16 +59,16 @@ export default {
 </script>
 
 <template>
-  <div class="bg-secondary-dark">
+  <div class="bg-text-primary px-10 sm:px-36 ">
     <div
-      class="pt-20 sm:pt-30 mt-20 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 mt-6 sm:px-20 px-10 sm:gap-5"
+      class="pt-20 sm:pt-30 mt-20 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 mt-6   sm:gap-6"
     >
       <!-- Footer social links -->
-      <div class="justify-left items-left text-left mb-12 sm:mb-20">
-        <img src="@/assets/images/logoss.png " alt="" class="logo" />
+      <div class="justify-left items-left text-left mb-12 sm:mb-20 ">
+        <img src="@/assets/images/octupos/octopus_deploy_logo.png " alt="" class="logo" />
 
         <!-- <p class="font-general-regular text-md capitalize sm:text-md text-gray-300"></p> -->
-        <p class="font-general-regular text-md capitalize sm:text-md text-gray-300 mb-2">
+        <!-- <p class="font-general-regular text-md capitalize sm:text-md text-gray-300 mb-2">
           Lekki,Lagos,Nigeria
         </p>
         <p class="font-general-regular text-md capitalize sm:text-md text-gray-300">
@@ -86,57 +88,136 @@ export default {
           >
             <i :data-feather="social.icon" class="w-4 sm:w-5 h-4 sm:h-6"></i>
           </a>
-        </ul>
+        </ul> -->
       </div>
-
+<!-- 
+Product
+Features
+What's New
+Roadmap
+Octopus vs. Azure DevOps
+Octopus vs. Jenkins -->
       <div class="justify-left items-left text-left mb-12 sm:mb-20">
         <h4
-          class="font-general-semibold text-md capitalize sm:text-md text-gray-300 mb-2"
+        class="font-general-medium text-md capitalize sm:text-md text-gray-700 mb-2"
         >
-          Useful Links
+        Product
         </h4>
 
-        <p class="font-general-regular text-md capitalize sm:text-md text-gray-300">
-          Home
+        <p class="font-general-regular text-md capitalize sm:text-md text-gray-500 mb-2">
+          Features
         </p>
-        <p class="font-general-regular text-md capitalize sm:text-md text-gray-300">
-          About Us
+        <p class="font-general-regular text-md capitalize sm:text-md text-gray-500 mb-2">
+          What's New
         </p>
-        <p class="font-general-regular text-md capitalize sm:text-md text-gray-300">
-          Services
+        <p class="font-general-regular text-md capitalize sm:text-md text-gray-500 mb-2">
+          Roadmap
         </p>
-        <p class="font-general-regular text-md capitalize sm:text-md text-gray-300">
-          Terms of service
+        <p class="font-general-regular text-md capitalize sm:text-md text-gray-500 mb-2">
+          Octopus vs. Azure DevOps
         </p>
-        <p class="font-general-regular text-md capitalize sm:text-md text-gray-300">
-          privacy policy
+        <p class="font-general-regular text-md capitalize sm:text-md text-gray-500 mb-2">
+          Octopus vs. Jenkins
         </p>
       </div>
-
+<!-- Learn
+Getting Started
+Guides
+DevOps Handbook
+Deployments
+Runbooks
+Training Videos -->
       <div class="justify-left items-left text-left mb-12 sm:mb-20">
         <h4
-          class="font-general-semibold text-md capitalize sm:text-md text-gray-300 mb-2"
+        class="font-general-medium text-md capitalize sm:text-md text-gray-700 mb-2"
         >
-          Our Services
+        Learn
         </h4>
 
-        <p class="font-general-regular text-md capitalize sm:text-md text-gray-300">
-          <!-- <router-link>         
-             Tourist
-          </router-link> -->
+        <p class="font-general-regular text-md capitalize sm:text-md text-gray-500 mb-2">
+          Getting Started
+                  </p>
+                  <p class="font-general-regular text-md capitalize sm:text-md text-gray-500 mb-2">
+          Guides
         </p>
-        <p class="font-general-regular text-md capitalize sm:text-md text-gray-300">
-          Imigration
+        <p class="font-general-regular text-md capitalize sm:text-md text-gray-500 mb-2">
+          DevOps Handbook
         </p>
-        <p class="font-general-regular text-md capitalize sm:text-md text-gray-300">
-          Marketing
+        <p class="font-general-regular text-md capitalize sm:text-md text-gray-500 mb-2">
+          Deployments
         </p>
+        <p class="font-general-regular text-md capitalize sm:text-md text-gray-500 mb-2">
+          Runbooks
+        </p>
+        <p class="font-general-regular text-md capitalize sm:text-md text-gray-500 mb-2">
+          Training Videos
+        </p>
+
       </div>
       <div class="justify-left items-left text-left mb-12 sm:mb-20">
         <h4
+        class="font-general-medium text-md capitalize sm:text-md text-gray-700 mb-2"
+        >
+        Help & Support        
+        </h4>
+
+        <p class="font-general-regular text-md capitalize sm:text-md text-gray-500 mb-2">
+          Contact
+                  </p>
+                  <p class="font-general-regular text-md capitalize sm:text-md text-gray-500 mb-2">
+          Help & Support
+        </p>
+        <p class="font-general-regular text-md capitalize sm:text-md text-gray-500 mb-2">
+          Community
+        </p>
+        <p class="font-general-regular text-md capitalize sm:text-md text-gray-500 mb-2">
+          Discussion Forum
+        </p>
+        <p class="font-general-regular text-md capitalize sm:text-md text-gray-500 mb-2">
+          Upgrade & Renew
+        </p>
+
+      </div>
+
+      <div class="justify-left items-left text-left mb-12 sm:mb-20">
+        <h4
+          class="font-general-medium text-md capitalize sm:text-md text-gray-700 mb-2"
+        >
+        About Us
+        </h4>
+
+        <p class="font-general-regular text-md capitalize sm:text-md text-gray-500 mb-2">
+          Company
+                  </p>
+                  <p class="font-general-regular text-md capitalize sm:text-md text-gray-500 mb-2">
+          Careers
+        </p>
+        <p class="font-general-regular text-md capitalize sm:text-md text-gray-500 mb-2">
+          Webinars & Events
+        </p>
+        <p class="font-general-regular text-md capitalize sm:text-md text-gray-500 mb-2">
+          Blog
+        </p>
+        <p class="font-general-regular text-md capitalize sm:text-md text-gray-500 mb-2">
+          Stickers & Swag 
+        </p>
+
+      </div>
+
+      <!-- 
+
+About Us
+Company
+Careers
+Webinars & Events
+Blog
+Stickers & Swag 
+-->
+      <!-- <div class="justify-left items-left text-left mb-12 sm:mb-20">
+        <h4
           class="font-general-semibold text-md capitalize sm:text-md text-gray-300 mb-2"
         >
-          Our Newsletter
+        Help & Support
         </h4>
 
         <p class="font-general-regular text-md capitalize sm:text-md text-gray-300 mb-2">
@@ -161,9 +242,11 @@ export default {
             aria-label="Submit Request"
           />
         </div>
-      </div>
+      </div> -->
     </div>
     <!-- Footer copyright -->
+    <hr/>
+
     <FooterCopyright />
   </div>
 </template>
@@ -177,7 +260,18 @@ export default {
   background: #022c0c;
   color: #000;
 }
-.logo {
+/* .logo {
   width: 100px;
+} */
+.logo {
+  width: 20%;
+  height: 15%;
 }
+@media only screen and (max-width: 425px) {
+  .logo {
+    width: 20%;
+    height: 20%;
+  }
+}
+
 </style>
