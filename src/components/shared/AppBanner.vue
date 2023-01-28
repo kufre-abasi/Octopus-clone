@@ -91,10 +91,8 @@ export default {
     <div></div>
     <!-- animation-container -->
     <div class="w-full my-10">
-      <!-- <lottie-player src="https://octopus.com/octopus-public/animations/hero-cicd-pipeline-animation.json" autoplay="" loop="" speed="1" intermission="1" class=" hide-sm hide-xs " style="margin-top: 0px;" background="transparent">
-
-</lottie-player> -->
-
+      <lottie-player src="https://www.octopus.com/octopus-public/animations/hero-cicd-pipeline-animation.json" autoplay="" loop="" speed="1" intermission="1" class=" hide-sm hide-xs " style="margin-top: 0px;" background="transparent">
+</lottie-player>
       <div>animation section</div>
       <div class="hide">      
         <img
@@ -164,9 +162,14 @@ font-weight: 400;
 
 }
 .hide{
-display: none;
+display:none;
 }
-@media (min-width: 992px){
+
+@media only screen and (max-width: 489px){
+.hide{
+display: block;
+}}
+@media  (min-width: 992px){
 .page-highlight.left {
     width: 578px;
 }}
