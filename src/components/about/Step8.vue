@@ -34,8 +34,43 @@ export default {
 
 <template>
   <div class="">
-    <div class="integrations-block hide-xs">
-        <div class="image" style="background-image: url(&quot;https://a.storyblok.com/f/185929/x/ec773abb47/draft-integrations.svg&quot;);"></div>
+    <div class="hide">
+      <div class="content px-3">
+        <header class="heading heading-center max-w-430  " style="">
+        <div class="eyebrow heading-center">
+        <div class="gradient-border medium">
+        <div class="eyebrow-heading pt-2">INTEGRATIONS</div>
+        </div>
+        </div>
+        <h1 class="font-general-regular mb-2 text-center justify-center text-text-secondary text-3xl"
+        >Deploy almost anything <br/> without scripting</h1>
+        <div class="mt-4 font-general-regular justify-center text-center mb-4 text-gray-400 text-md"><p>Octopus has over 500 integrations with the tools DevOps teams use, making setup easy.</p>
+        </div>
+        </header>
+        <!-- <hr class="bg-cl w-1/6 "/> -->
+        </div>
+      
+            <!-- <img
+        src="@/assets/images/octupos/integrations-mobile.svg"
+        class=" mt-5 sm:mb-0 sm:mt-10 "
+        alt=""
+      /> -->
+        <figure class="image-wrapper px-3">
+            <img class="  " style="" src="https://a.storyblok.com/f/185929/x/910f777bff/integrations-mobile.svg" alt="">
+            <figcaption></figcaption>
+        </figure>
+        <p class="text-gray-300 text-xl mb-5">Plus many more.</p>
+      <div>        
+        <a href="https://library.octopus.com/listing" target="_blank" class="underline-arrow  flex  p-0 justify-center " onclick="this.blur()" style="">
+               View all        
+               <svg class="my-1 mx-1" width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5.41999 0.915365L6.03044 0.291039C6.28892 0.0266849 6.70689 0.0266849 6.96262 0.291039L12.3082 5.7553C12.5667 6.01965 12.5667 6.44712 12.3082 6.70866L6.96262 12.1757C6.70414 12.4401 6.28617 12.4401 6.03044 12.1757L5.41999 11.5514C5.15876 11.2842 5.16426 10.8483 5.43099 10.5868L8.74449 7.3583H0.84159C0.475868 7.3583 0.181641 7.05739 0.181641 6.68335V5.78342C0.181641 5.40939 0.475868 5.10848 0.84159 5.10848H8.74449L5.43099 1.87998C5.16151 1.61844 5.15601 1.18253 5.41999 0.915365Z" fill="currentColor"></path></svg>
+        </a>
+      </div>
+
+    </div>
+    <!-- integrations-mobile.svg -->
+    <div class="integrations-block hideOnmobile">
+        <div class="image " style="background-image: url(&quot;https://a.storyblok.com/f/185929/x/ec773abb47/draft-integrations.svg&quot;);"></div>
         <div class="content">
         <header class="heading heading-center max-w-430  " style="">
         <div class="eyebrow heading-center">
@@ -45,10 +80,10 @@ export default {
         </div>
         <h1 class="font-general-regular mb-2 text-center text-text-secondary text-4xl"
 >Deploy almost anything <br/> without scripting</h1>
-        <div class="mt-4 font-general-regular text-left mb-4 text-gray-400 text-md"><p>Octopus has over 500 integrations with the tools DevOps teams use, making setup easy.</p>
+        <div class="mt-5 font-general-regular text-center mb-4 text-gray-400 text-md"><p>Octopus has over 500 integrations with the tools DevOps teams use, making setup easy.</p>
         </div>
         </header>
-        <a href="https://library.octopus.com/listing" target="_blank" class="underlined-arrow   p-0 " onclick="this.blur()" style="">       View all        <svg class="my-1 mx-1" width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5.41999 0.915365L6.03044 0.291039C6.28892 0.0266849 6.70689 0.0266849 6.96262 0.291039L12.3082 5.7553C12.5667 6.01965 12.5667 6.44712 12.3082 6.70866L6.96262 12.1757C6.70414 12.4401 6.28617 12.4401 6.03044 12.1757L5.41999 11.5514C5.15876 11.2842 5.16426 10.8483 5.43099 10.5868L8.74449 7.3583H0.84159C0.475868 7.3583 0.181641 7.05739 0.181641 6.68335V5.78342C0.181641 5.40939 0.475868 5.10848 0.84159 5.10848H8.74449L5.43099 1.87998C5.16151 1.61844 5.15601 1.18253 5.41999 0.915365Z" fill="currentColor"></path></svg>
+        <a href="https://library.octopus.com/listing" target="_blank" class="underlined-arrow   p-0 mt-5 flex justify-center " onclick="this.blur()" style="">       View all        <svg class="my-1 mx-1" width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5.41999 0.915365L6.03044 0.291039C6.28892 0.0266849 6.70689 0.0266849 6.96262 0.291039L12.3082 5.7553C12.5667 6.01965 12.5667 6.44712 12.3082 6.70866L6.96262 12.1757C6.70414 12.4401 6.28617 12.4401 6.03044 12.1757L5.41999 11.5514C5.15876 11.2842 5.16426 10.8483 5.43099 10.5868L8.74449 7.3583H0.84159C0.475868 7.3583 0.181641 7.05739 0.181641 6.68335V5.78342C0.181641 5.40939 0.475868 5.10848 0.84159 5.10848H8.74449L5.43099 1.87998C5.16151 1.61844 5.15601 1.18253 5.41999 0.915365Z" fill="currentColor"></path></svg>
         </a>
         <!-- <hr class="bg-cl w-1/6 "/> -->
         </div>
@@ -149,21 +184,57 @@ svg:not(:root) {
     overflow: hidden;
 }
 
-.underlined-arrow:after {
+.underline-arrow:after {
     border-bottom: 1px solid;
     bottom: 0;
     content: "";
     height: 1px;
-    margin: auto;
+    margin: 0 auto;
     position: absolute;
     right: 0;
-    width: 99%;
+    left:0;
+    width: 25%;
+}
+.content .underlined-arrow:after{
+  border-bottom: 1px solid;
+    bottom: 0;
+    content: "";
+    height: 1px;
+    margin: 0 auto;
+    position: absolute;
+    right: 0;
+    left:0;
+    width: 6%;
+}
+.image-wrapper {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+figure {
+    page-break-inside: avoid;
+}
+figure {
+    margin: 0 0 1rem;
+}
+.hide{
+display:none;
 }
 
+@media only screen and (max-width: 489px){
+.hide{
+display: block;
+}}
 
 
+.hideOnmobile{
+display:block;
+}
 
-
+@media only screen and (max-width: 489px){
+.hideOnmobile{
+display: none;
+}}
 
 
 @media screen and (max-width: 320px) {
