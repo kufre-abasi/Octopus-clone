@@ -191,7 +191,7 @@ border-top-width: 3px;
     position: relative;
 }
 .radio-button input[type=radio]:checked+label:before {
-    background-image: url(@/assets/images/octupos/blue-check-mark-icon.svg);
+    background-image: url(../../assets/images/octupos/blue-check-mark-icon.svg);
     /* background-image: url(../assets/images/bg-lekki.png); */
 
     background-position: 50%;
