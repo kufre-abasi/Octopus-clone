@@ -83,21 +83,9 @@ export default {
               src="@/assets/images/octupos/octopus_deploy_logo.png "
               alt=""
               class="logo"
-            /> <h1>
+            /> <h1 class="font-general-semibold text-md text-gray-700 py-5">
               Octopus Deploy
             </h1>
-						<img
-							v-if="theme === 'light'"
-							src="@/assets/images/K1.png"
-							class="w-36"
-							alt="Dark Logo"
-						/>
-						<img
-							v-else
-							src="@/assets/images/K1.png"
-							class="w-36"
-							alt="Light Logo"
-						/> -->
           </router-link>
         </div>
 

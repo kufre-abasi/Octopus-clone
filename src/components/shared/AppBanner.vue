@@ -57,7 +57,7 @@ export default {
         tools.
       </p>
       </div>
-      <div class="justify-center  md:mx-64 mx-1 mt-10 items-center text-center grid grid-cols-1 md:grid-cols-2 gap-0 md:gap-0 ">
+      <div class="justify-center  md:mx-64 mx-1 mt-10 items-center text-center block md:flex-col-2 md:col-gap-2  ">
         <!-- <div class="justify-right items-right"> -->
           <a
           class=" mx-0 text-sm bg-accent-primary cry90 bttn "
@@ -137,11 +137,11 @@ export default {
   border-radius: 36px;
     font-weight: 400;
     line-height: 22px;
-    padding: 14px 0px;
+    padding: 14px 20px;
     transition: background .25s,color .25s,filter .25s;
     /* background:#00b065; */
     border-color: #00ffa3;
-    width: 50%;
+    /* width: 100px; */
 }
 .cry90{   
    color: #113049;
