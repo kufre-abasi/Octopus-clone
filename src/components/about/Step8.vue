@@ -88,8 +88,15 @@ export default {
         <!-- <hr class="bg-cl w-1/6 "/> -->
         </div>
     </div>
-
-  </div>
+    <div class="pt-6 mt-3"></div>
+      <wave-svg class="stripe-wave stripe-wave-into-navy">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="-900 -100 900 50" preserveAspectRatio="none">
+            <g transform="rotate(180, 0, 0) translate(0, 0)">
+            <path d="M0,0V75c.5.5,94.5-25,250-25,144,0,254.3,49.5,400,50,137.5.5,250.5-24.5,250-25S899.5.5,900,0,92.5,0,0,0Z" fill="#0f2535"></path>
+            </g>
+        </svg>
+      </wave-svg>
+    </div>
 </template>
 
 <style scoped>

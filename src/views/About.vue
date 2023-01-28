@@ -7,7 +7,7 @@ import Step5 from '@/components/about/Step5';
 import Step6 from '@/components/about/Step6';
 import Step7 from '@/components/about/Step7';
 import Step8 from '@/components/about/Step8';
-
+import Step9 from '@/components/about/Step9';
 import feather from "feather-icons";
 
 export default {
@@ -21,6 +21,7 @@ export default {
     Step6,
     Step7,
     Step8,
+    Step9,
     // AboutClients,
   },
   data: () => {
@@ -48,6 +49,7 @@ export default {
       <Step6 />
       <Step7 />
       <Step8 />
+      <Step9 />
     </div>
 
     <!-- About counter -->
