@@ -2,6 +2,7 @@
 export default {
   setup() {
     return {
+      activetab: "1",
       image: "@/assets/images/kub1.jpg",
       bios: [
         {
@@ -29,6 +30,12 @@ export default {
       ],
     };
   },
+  methods: {
+    onChange(e) {
+      this.e.target.value;
+    },
+  },
+
 };
 </script>
 
@@ -55,9 +62,13 @@ export default {
 
     <div class=" md:mx-24 mt-5 grid grid-cols-1 sm:grid-cols-2  mt-10 gap-7 md:px-12 ">
     <div class="">
-        <div class="radio-button">
-            <input type="radio" id="cloud" name="platform" value="cloud" checked="checked">
-            <label for="cloud" class="radio-button text-left  py-4">
+        <div
+        v-on:click="activetab = '1'"
+            v-bind:class="[activetab === '1' ? 'active' : '']"
+         class="radio-button">
+            <input  type="radio" id="cloud" name="platform" value="cloud" checked="checked">
+            <label 
+            for="cloud" class="radio-button text-left  py-4">
                 <strong class="text-lg text-gray-100">Cloud</strong>
                 <br>
                 <span class="text-md text-gray-400 font-general-regular">Deployments as-a-service</span>
@@ -65,9 +76,13 @@ export default {
         </div> 
     </div>
     <div class="">
-        <div class="radio-button">
-            <input type="radio" id="server" name="platform" value="server">
-            <label for="server" class="radio-button text-left py-4" >
+        <div
+        v-on:click="activetab = '2'"
+            v-bind:class="[activetab === '2' ? 'active' : '']"
+         class="radio-button">
+            <input  type="radio" id="server" name="platform" value="server">
+            <label
+             for="server" class="radio-button text-left py-4" >
                 <strong class="text-lg text-gray-100">Server</strong>
                 <br>
                 <span class="text-md text-gray-400 font-general-regular">Octopus on your infrastructure</span>
@@ -77,7 +92,7 @@ export default {
 </div>
 
 
-<div class="grid grid-cols-1 sm:grid-cols-3  mt-10 sm:gap-10  mt-6">
+<div v-if="activetab === '1'" class="grid grid-cols-1 sm:grid-cols-3  mt-10 sm:gap-10  mt-6">
 <div class="">
     <div class="card mx-auto pricing-card mb-4">
         <div class="card-body d-flex flex-column justify-content-between">
@@ -92,26 +107,26 @@ export default {
                 </div>
                 <div class="card__price">
                     <div class="server-only" style="display: none">
-                        <div class="d-flex align-items-baseline mb-2">
-                            <h1 class="fw-400 mt-0 mb-0 mr-2">Free</h1>
+                        <div class="flex align-items-baseline mb-2">
+                            <h1 class="text-4xl font-general-regular text-gray-100 mt-0 mb-0 mr-2">Free</h1>
                         </div>
                     </div>
                     <div class="cloud-only">
-                        <div class="d-flex align-items-baseline mb-2">
-                            <h1 class="fw-400 mt-0 mb-0 mr-2">$10</h1>
-                            <p class="small mb-0">flat fee, per month</p>
+                        <div class="flex align-items-baseline mb-2">
+                            <h1 class="text-5xl text-gray-100 mt-0 font-general-regular mb-0 mr-2">$10</h1>
+                            <p class="text-sm  text-gray-300 pt-5 font-general-regular mb-0">flat fee, per month</p>
                         </div>
                     </div>
-                    <p class="small text-muted">Billed monthly</p>
+                    <p class="text-sm text-left text-gray-200 mt-5 font-general-regular">Billed monthly</p>
                 </div>
-                <div class="card__features">
-                    <ul class="fa-ul d-flex flex-column mt-3 ml-4" style="gap: var(--spacer-2);">
-                        <li class="cloud-only">
+                <div class="card__features font-general-regular">
+                    <ul class="fa-ul flex flex-column mt-3  text-left" style="gap: 0.5rem;">
+                        <li class="cloud-only flex text-left">
                             <span class="fa-li">
-                                <svg class="svg-inline--fa fa-check-circle fa-w-16 color-text-cyan-40 fs-18" aria-hidden="true" focusable="false" data-prefix="fa" data-icon="check-circle" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg=""><path fill="currentColor" d="M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628.001z"></path></svg><!-- <i class="fa color-text-cyan-40 fa-check-circle fs-18"></i> Font Awesome fontawesome.com -->
+                                <svg class="svg-inline--fa fa-check-circle w-5 color-text-cyan-40 " aria-hidden="true" focusable="false" data-prefix="fa" data-icon="check-circle" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg=""><path fill="#007bff" d="M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628.001z"></path></svg><!-- <i class="fa color-text-cyan-40 fa-check-circle fs-18"></i> Font Awesome fontawesome.com -->
                             </span>
-                            <span>
-                                <strong>5</strong>
+                            <span class="ml-2 text-gray-100 font-general-regular">
+                                <strong class="mr-1">5</strong>
                                 <abbr>
                                     <abbr><a tabindex="0" href="#" class="clickable" data-container="body" data-toggle="popover" data-placement="right" onclick="void(0);" title="" data-content="Deployment targets are the Windows and Linux servers, Kubernetes Clusters, and cloud PaaS resources you deploy to. <a href='/pricing/faq#what-is-the-pricing-for-octopus-cloud'>Learn more</a>.<br/><br/>You will only be charged for the targets you use in your cloud instance." data-original-title="What are deployment targets?">deployment targets</a></abbr>
                                 </abbr>
@@ -119,18 +134,18 @@ export default {
                         </li>
                         <li class="server-only" style="display: none;">
                              <span class="fa-li">
-                                  <svg class="svg-inline--fa fa-check-circle fa-w-16 color-text-cyan-40 fs-18" aria-hidden="true" focusable="false" data-prefix="fa" data-icon="check-circle" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg=""><path fill="currentColor" d="M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628.001z"></path></svg><!-- <i class="fa color-text-cyan-40 fa-check-circle fs-18"></i> Font Awesome fontawesome.com -->
+                                  <svg class="svg-inline--fa fa-check-circle w-5 color-text-cyan-40 fs-18" aria-hidden="true" focusable="false" data-prefix="fa" data-icon="check-circle" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg=""><path fill="#007bff" d="M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628.001z"></path></svg><!-- <i class="fa color-text-cyan-40 fa-check-circle fs-18"></i> Font Awesome fontawesome.com -->
                              </span>
-                             <span>
+                             <span class="ml-2 text-gray-100">
                                  <strong>5</strong> 
                                  <abbr><a tabindex="0" href="#" class="clickable" data-container="body" data-toggle="popover" data-placement="right" onclick="void(0);" title="" data-content="Deployment targets are the Windows and Linux servers, Kubernetes Clusters, and cloud PaaS resources you deploy to. <a href='/pricing/faq#what-is-the-pricing-for-octopus-server '>Learn more</a>.<br/><br/>You will only be charged for the targets you use in your server instance." data-original-title="What are deployment targets?">deployment targets</a></abbr>
                             </span>
                         </li>
-                        <li>
+                        <li class="flex text-left">
                             <span class="fa-li">
-                                <svg class="svg-inline--fa fa-check-circle fa-w-16 color-text-cyan-40 fs-18" aria-hidden="true" focusable="false" data-prefix="fa" data-icon="check-circle" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg=""><path fill="currentColor" d="M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628.001z"></path></svg><!-- <i class="fa color-text-cyan-40 fa-check-circle fs-18"></i> Font Awesome fontawesome.com -->
+                                <svg class="svg-inline--fa fa-check-circle w-5 color-text-cyan-40 fs-18" aria-hidden="true" focusable="false" data-prefix="fa" data-icon="check-circle" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg=""><path fill="#007bff" d="M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628.001z"></path></svg><!-- <i class="fa color-text-cyan-40 fa-check-circle fs-18"></i> Font Awesome fontawesome.com -->
                             </span>
-                            <span><strong>5</strong> projects</span>
+                            <span class="ml-2 text-gray-100"><strong class="mr-1">5</strong> projects</span>
                         </li>
                     </ul>
                 </div>
@@ -164,26 +179,26 @@ export default {
                 </div>
                 <div class="card__price">
                     <div class="d-flex align-items-baseline mb-2">
-                        <h1 id="card-price" class="fw-400 mt-0 mb-0 mr-2">$12</h1>
-                        <p class="small mb-0 cloud-only">per <abbr><a tabindex="0" href="#" class="clickable" data-container="body" data-toggle="popover" data-placement="right" onclick="void(0);" title="" data-content="Deployment targets are the Windows and Linux servers, Kubernetes Clusters, and cloud PaaS resources you deploy to. 
+                        <h1 id="card-price" class="text-5xl text-gray-100 mt-0 font-general-regular mb-0 mr-2">$12</h1>
+                        <p class="text-sm  text-gray-300 pt-5 font-general-regular mb-0">per <abbr><a tabindex="0" href="#" class="clickable" data-container="body" data-toggle="popover" data-placement="right" onclick="void(0);" title="" data-content="Deployment targets are the Windows and Linux servers, Kubernetes Clusters, and cloud PaaS resources you deploy to. 
                             <a href='/pricing/faq#what-is-the-pricing-for-octopus-cloud'>Learn more</a>.<br/><br/>You will only be charged for the targets you use in your cloud instance." data-original-title="What are deployment targets?">target
                             </a></abbr>, per month
                         </p>
-                        <p class="small mb-0 server-only" style="display: none;">per <abbr><a tabindex="0" href="#" class="clickable" data-container="body" data-toggle="popover" data-placement="right" onclick="void(0);" title="" data-content="Deployment targets are the Windows and Linux servers, Kubernetes Clusters, and cloud PaaS resources you deploy to. 
+                        <p class="text-sm  text-gray-300 pt-5 font-general-regular mb-0" style="display: none;">per <abbr><a tabindex="0" href="#" class="clickable" data-container="body" data-toggle="popover" data-placement="right" onclick="void(0);" title="" data-content="Deployment targets are the Windows and Linux servers, Kubernetes Clusters, and cloud PaaS resources you deploy to. 
                             <a href='/pricing/faq#what-is-the-pricing-for-octopus-server'>Learn more</a>.<br/><br/>You will only be charged for the targets you use in your cloud instance." data-original-title="What are deployment targets?">target
                             </a></abbr>, per month
                         </p>
                     </div>
-                    <p class="small text-muted cloud-only">Billed <span id="billing-cycle">annually</span>, 5 <abbr>
+                    <p class="text-sm text-left text-gray-200 mt-5 font-general-regular cloud-only">Billed <span id="billing-cycle">annually</span>, 5 <abbr>
                         <a tabindex="0" href="#" class="clickable" data-container="body" data-toggle="popover" data-placement="right" onclick="void(0);" title="" data-content="Deployment targets are the Windows and Linux servers, Kubernetes Clusters, and cloud PaaS resources you deploy to. <a href='/pricing/faq#what-is-the-pricing-for-octopus-cloud'>Learn more</a>.<br/><br/>You will only be charged for the targets you use in your cloud instance." data-original-title="What are deployment targets?">targets
                         </a></abbr> minimum
                     </p>
-                    <p class="small text-muted server-only" style="display: none;">Billed <span id="billing-cycle">annually</span>, 5 <abbr>
+                    <p class="text-sm text-left text-gray-200 mt-5 font-general-regular server-only" style="display: none;">Billed <span id="billing-cycle">annually</span>, 5 <abbr>
                         <a tabindex="0" href="#" class="clickable" data-container="body" data-toggle="popover" data-placement="right" onclick="void(0);" title="" data-content="Deployment targets are the Windows and Linux servers, Kubernetes Clusters, and cloud PaaS resources you deploy to. <a href='/pricing/faq#what-is-the-pricing-for-octopus-server '>Learn more</a>.<br/><br/>You will only be charged for the targets you use in your server instance." data-original-title="What are deployment targets?">targets
                         </a></abbr> minimum
                     </p>
                 </div>
-                <div class="cloud-only align-self-center">
+                <!-- <div class="cloud-only align-self-center">
                     <div class="card__billing-container d-flex justify-content-center p-2 border-grey30 w-100 mx-auto">
                         <button type="button" id="annually" data-selected="true" data-price="$12" data-billing-cycle="annually" class="btn btn-sm w-100 mr-2 btn-brand">
                             Annually
@@ -193,36 +208,36 @@ export default {
                             Monthly
                         </button>
                     </div>
-                </div>
+                </div> -->
                 <div class="card__features">
-                    <ul class="fa-ul d-flex flex-column mt-3 ml-4" style="gap: var(--spacer-2);">
-                        <li>
+                    <ul class="fa-ul d-flex flex-column mt-3  text-left" style="gap: var(--spacer-2);">
+                        <li class="flex mb-1">
                             <span class="fa-li">
-                                <svg class="svg-inline--fa fa-check-circle fa-w-16 color-text-cyan-40 fs-18" aria-hidden="true" focusable="false" data-prefix="fa" data-icon="check-circle" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg=""><path fill="currentColor" d="M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628.001z"></path></svg><!-- <i class="fa color-text-cyan-40 fa-check-circle fs-18"></i> Font Awesome fontawesome.com -->
+                                <svg class="svg-inline--fa fa-check-circle w-5 color-text-cyan-40 fs-18" aria-hidden="true" focusable="false" data-prefix="fa" data-icon="check-circle" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg=""><path fill="#007bff" d="M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628.001z"></path></svg><!-- <i class="fa color-text-cyan-40 fa-check-circle fs-18"></i> Font Awesome fontawesome.com -->
                             </span>
-                            <span><strong class="fw-500">Unlimited</strong> projects</span>
+                            <span class="ml-2 text-gray-100"><strong class=" text-left text-gray-200  mr-1">Unlimited</strong> projects</span>
                         </li>
-                        <li>
+                        <li class="flex mb-1">
                             <span class="fa-li">
-                                <svg class="svg-inline--fa fa-check-circle fa-w-16 color-text-cyan-40 fs-18" aria-hidden="true" focusable="false" data-prefix="fa" data-icon="check-circle" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg=""><path fill="currentColor" d="M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628.001z"></path></svg><!-- <i class="fa color-text-cyan-40 fa-check-circle fs-18"></i> Font Awesome fontawesome.com -->
+                                <svg class="svg-inline--fa fa-check-circle w-5 color-text-cyan-40 fs-18" aria-hidden="true" focusable="false" data-prefix="fa" data-icon="check-circle" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg=""><path fill="#007bff" d="M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628.001z"></path></svg><!-- <i class="fa color-text-cyan-40 fa-check-circle fs-18"></i> Font Awesome fontawesome.com -->
                             </span>
-                            <span><strong class="fw-500">Unlimited</strong> users</span>
+                            <span class="ml-2 text-gray-100"><strong class="  mr-1">Unlimited</strong> users</span>
                         </li>
-                        <li>
+                        <li class="flex mb-1">
                             <span class="fa-li">
-                                <svg class="svg-inline--fa fa-check-circle fa-w-16 color-text-cyan-40 fs-18" aria-hidden="true" focusable="false" data-prefix="fa" data-icon="check-circle" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg=""><path fill="currentColor" d="M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628.001z"></path></svg><!-- <i class="fa color-text-cyan-40 fa-check-circle fs-18"></i> Font Awesome fontawesome.com -->
+                                <svg class="svg-inline--fa fa-check-circle w-5 color-text-cyan-40 fs-18" aria-hidden="true" focusable="false" data-prefix="fa" data-icon="check-circle" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg=""><path fill="#007bff" d="M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628.001z"></path></svg><!-- <i class="fa color-text-cyan-40 fa-check-circle fs-18"></i> Font Awesome fontawesome.com -->
                             </span>
-                            <span><strong class="fw-500">Unlimited</strong> spaces</span>
+                            <span class="ml-2 text-gray-100"><strong class=" text-left text-gray-200 mr-1">Unlimited</strong> spaces</span>
                         </li>
-                        <li>
+                        <li class="flex mb-1">
                             <span class="fa-li">
-                                <svg class="svg-inline--fa fa-check-circle fa-w-16 color-text-cyan-40 fs-18" aria-hidden="true" focusable="false" data-prefix="fa" data-icon="check-circle" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg=""><path fill="currentColor" d="M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628.001z"></path></svg><!-- <i class="fa color-text-cyan-40 fa-check-circle fs-18"></i> Font Awesome fontawesome.com -->
+                                <svg class="svg-inline--fa fa-check-circle w-5 color-text-cyan-40 fs-18" aria-hidden="true" focusable="false" data-prefix="fa" data-icon="check-circle" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg=""><path fill="#007bff" d="M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628.001z"></path></svg><!-- <i class="fa color-text-cyan-40 fa-check-circle fs-18"></i> Font Awesome fontawesome.com -->
                             </span>
-                            <span><strong class="fw-500">24/5</strong> support</span>
+                            <span class="ml-2 text-gray-100"><strong class=" text-left text-gray-200 mr-1">24/5</strong> support</span>
                         </li>
-                        <li class="server-only" style="display: none;">
+                        <li class="server-only flex mb-1" style="display: none;">
                             <span class="fa-li">
-                                <svg class="svg-inline--fa fa-check-circle fa-w-16 color-text-cyan-40 fs-18" aria-hidden="true" focusable="false" data-prefix="fa" data-icon="check-circle" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg=""><path fill="currentColor" d="M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628.001z"></path></svg><!-- <i class="fa color-text-cyan-40 fa-check-circle fs-18"></i> Font Awesome fontawesome.com -->
+                                <svg class="svg-inline--fa fa-check-circle w-5 color-text-cyan-40 fs-18" aria-hidden="true" focusable="false" data-prefix="fa" data-icon="check-circle" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg=""><path fill="#007bff" d="M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628.001z"></path></svg><!-- <i class="fa color-text-cyan-40 fa-check-circle fs-18"></i> Font Awesome fontawesome.com -->
                             </span>
                             <span>Up to <strong class="fw-500">3</strong> instances</span>
                         </li>
@@ -283,43 +298,43 @@ export default {
                     <ul class="fa-ul d-flex flex-column mt-3 ml-4" style="gap: var(--spacer-2);">
                         <li class="server-only" style="display: none;">
                             <span class="fa-li">
-                                <svg class="svg-inline--fa fa-check-circle fa-w-16 color-text-cyan-40 fs-18" aria-hidden="true" focusable="false" data-prefix="fa" data-icon="check-circle" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg=""><path fill="currentColor" d="M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628.001z"></path></svg><!-- <i class="fa color-text-cyan-40 fa-check-circle fs-18"></i> Font Awesome fontawesome.com -->
+                                <svg class="svg-inline--fa fa-check-circle w-5 color-text-cyan-40 fs-18" aria-hidden="true" focusable="false" data-prefix="fa" data-icon="check-circle" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg=""><path fill="#007bff" d="M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628.001z"></path></svg><!-- <i class="fa color-text-cyan-40 fa-check-circle fs-18"></i> Font Awesome fontawesome.com -->
                             </span>
                             <span>Advanced high availability</span>
                         </li>
                         <li>
                             <span class="fa-li">
-                                <svg class="svg-inline--fa fa-check-circle fa-w-16 color-text-cyan-40 fs-18" aria-hidden="true" focusable="false" data-prefix="fa" data-icon="check-circle" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg=""><path fill="currentColor" d="M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628.001z"></path></svg><!-- <i class="fa color-text-cyan-40 fa-check-circle fs-18"></i> Font Awesome fontawesome.com -->
+                                <svg class="svg-inline--fa fa-check-circle w-5 color-text-cyan-40 fs-18" aria-hidden="true" focusable="false" data-prefix="fa" data-icon="check-circle" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg=""><path fill="#007bff" d="M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628.001z"></path></svg><!-- <i class="fa color-text-cyan-40 fa-check-circle fs-18"></i> Font Awesome fontawesome.com -->
                             </span>
                             <span>Insights &amp; DORA metrics</span>
                         </li>
                         <li>
                             <span class="fa-li">
-                                <svg class="svg-inline--fa fa-check-circle fa-w-16 color-text-cyan-40 fs-18" aria-hidden="true" focusable="false" data-prefix="fa" data-icon="check-circle" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg=""><path fill="currentColor" d="M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628.001z"></path></svg><!-- <i class="fa color-text-cyan-40 fa-check-circle fs-18"></i> Font Awesome fontawesome.com -->
+                                <svg class="svg-inline--fa fa-check-circle w-5 color-text-cyan-40 fs-18" aria-hidden="true" focusable="false" data-prefix="fa" data-icon="check-circle" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg=""><path fill="#007bff" d="M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628.001z"></path></svg><!-- <i class="fa color-text-cyan-40 fa-check-circle fs-18"></i> Font Awesome fontawesome.com -->
                             </span>
                             <span>ServiceNow &amp; Jira Service Management integration</span>
                         </li>
                         <li class="server-only" style="display: none;">
                             <span class="fa-li">
-                                <svg class="svg-inline--fa fa-check-circle fa-w-16 color-text-cyan-40 fs-18" aria-hidden="true" focusable="false" data-prefix="fa" data-icon="check-circle" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg=""><path fill="currentColor" d="M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628.001z"></path></svg><!-- <i class="fa color-text-cyan-40 fa-check-circle fs-18"></i> Font Awesome fontawesome.com -->
+                                <svg class="svg-inline--fa fa-check-circle w-5 color-text-cyan-40 fs-18" aria-hidden="true" focusable="false" data-prefix="fa" data-icon="check-circle" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg=""><path fill="#007bff" d="M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628.001z"></path></svg><!-- <i class="fa color-text-cyan-40 fa-check-circle fs-18"></i> Font Awesome fontawesome.com -->
                             </span>
                             <span><strong class="fw-500">Unlimited</strong> instances</span>
                         </li>
                         <li>
                             <span class="fa-li">
-                                <svg class="svg-inline--fa fa-check-circle fa-w-16 color-text-cyan-40 fs-18" aria-hidden="true" focusable="false" data-prefix="fa" data-icon="check-circle" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg=""><path fill="currentColor" d="M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628.001z"></path></svg><!-- <i class="fa color-text-cyan-40 fa-check-circle fs-18"></i> Font Awesome fontawesome.com -->
+                                <svg class="svg-inline--fa fa-check-circle w-5 color-text-cyan-40 fs-18" aria-hidden="true" focusable="false" data-prefix="fa" data-icon="check-circle" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg=""><path fill="#007bff" d="M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628.001z"></path></svg><!-- <i class="fa color-text-cyan-40 fa-check-circle fs-18"></i> Font Awesome fontawesome.com -->
                             </span>
                             <span>24/7 support</span>
                         </li>
                         <li>
                             <span class="fa-li">
-                                <svg class="svg-inline--fa fa-check-circle fa-w-16 color-text-cyan-40 fs-18" aria-hidden="true" focusable="false" data-prefix="fa" data-icon="check-circle" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg=""><path fill="currentColor" d="M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628.001z"></path></svg><!-- <i class="fa color-text-cyan-40 fa-check-circle fs-18"></i> Font Awesome fontawesome.com -->
+                                <svg class="svg-inline--fa fa-check-circle w-5 color-text-cyan-40 fs-18" aria-hidden="true" focusable="false" data-prefix="fa" data-icon="check-circle" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg=""><path fill="#007bff" d="M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628.001z"></path></svg><!-- <i class="fa color-text-cyan-40 fa-check-circle fs-18"></i> Font Awesome fontawesome.com -->
                             </span>
                             <span>Customer Success Manager</span>
                         </li>
                         <li>
                             <span class="fa-li">
-                                <svg class="svg-inline--fa fa-check-circle fa-w-16 color-text-cyan-40 fs-18" aria-hidden="true" focusable="false" data-prefix="fa" data-icon="check-circle" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg=""><path fill="currentColor" d="M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628.001z"></path></svg><!-- <i class="fa color-text-cyan-40 fa-check-circle fs-18"></i> Font Awesome fontawesome.com -->
+                                <svg class="svg-inline--fa fa-check-circle w-5 color-text-cyan-40 fs-18" aria-hidden="true" focusable="false" data-prefix="fa" data-icon="check-circle" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg=""><path fill="#007bff" d="M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628.001z"></path></svg><!-- <i class="fa color-text-cyan-40 fa-check-circle fs-18"></i> Font Awesome fontawesome.com -->
                             </span>
                             <span>Stream your Octopus audit logs to a SIEM provider</span>
                         </li>
@@ -344,9 +359,9 @@ export default {
 
 
 
-    <div class="grid grid-cols-1 sm:grid-cols-3  mt-10 sm:gap-20 ">
+    <div v-if="activetab === '2'" class="grid grid-cols-1 sm:grid-cols-3  mt-10 sm:gap-20 ">
       
-
+ggg
     </div>
   </div>
 </template>
@@ -539,5 +554,19 @@ border-top-width: 3px;
     -ms-flex: 1 1 auto;
     flex: 1 1 auto;
     padding: 1.25rem;
+}
+.btn:not(.navbar-toggler).btn-primary {
+    background: #00ffa3;
+    border-color: #00ffa3;
+    color: #113049;
+}
+.btn:not(.navbar-toggler) {
+    border-radius: 36px;
+    border-width: 2px;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 22px;
+    padding: 10px 40px;
+    transition: background .25s,color .25s,filter .25s;
 }
 </style>
