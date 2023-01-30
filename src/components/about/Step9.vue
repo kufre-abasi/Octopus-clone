@@ -40,6 +40,7 @@ export default {
 </script>
 
 <template>
+    <div class="   main-color ">
   <div class="py-20 px-8 md:px-24 flex-container stripe   stripe-navy">
     <div class="eyebrow heading-center">
       <div class="gradient-border">
@@ -63,11 +64,13 @@ export default {
     <div class=" md:mx-24 mt-5 grid grid-cols-1 sm:grid-cols-2  mt-10 gap-7 md:px-12 ">
     <div class="">
         <div
-        v-on:click="activetab = '1'"
-            v-bind:class="[activetab === '1' ? 'active' : '']"
          class="radio-button">
-            <input  type="radio" id="cloud" name="platform" value="cloud" checked="checked">
+            <input 
+            v-on:click="activetab = '1'"
+            v-bind:class="[activetab === '1' ? 'active' : '']"
+             type="radio" id="cloud" name="platform" value="cloud" checked="checked">
             <label 
+
             for="cloud" class="radio-button text-left  py-4">
                 <strong class="text-lg text-gray-100">Cloud</strong>
                 <br>
@@ -77,10 +80,11 @@ export default {
     </div>
     <div class="">
         <div
-        v-on:click="activetab = '2'"
-            v-bind:class="[activetab === '2' ? 'active' : '']"
          class="radio-button">
-            <input  type="radio" id="server" name="platform" value="server">
+            <input 
+            v-on:click="activetab = '2'"
+            v-bind:class="[activetab === '2' ? 'active' : '']"
+             type="radio" id="server" name="platform" value="server">
             <label
              for="server" class="radio-button text-left py-4" >
                 <strong class="text-lg text-gray-100">Server</strong>
@@ -92,7 +96,7 @@ export default {
 </div>
 
 
-<div v-if="activetab === '1'" class="grid grid-cols-1 sm:grid-cols-3  mt-10 sm:gap-10  mt-6">
+<div v-if="activetab === '1'" class="grid grid-cols-1 sm:grid-cols-3  mt-10 gap-4  mt-6">
 <div class="">
     <div class="card mx-auto pricing-card mb-4">
         <div class="card-body d-flex flex-column justify-content-between">
@@ -160,7 +164,7 @@ export default {
                               </g>
                             </svg></hover-button>
                 </a>
-                <p class="fs-12 mt-2 mb-0 text-muted">Free for 30 days. No credit card required.</p>
+                <p class="fs-12 mt-3 mb-0 text-gray-400">Free for 30 days. No credit card required.</p>
             </div>
         </div>
     </div>
@@ -215,31 +219,31 @@ export default {
                             <span class="fa-li">
                                 <svg class="svg-inline--fa fa-check-circle w-5 color-text-cyan-40 fs-18" aria-hidden="true" focusable="false" data-prefix="fa" data-icon="check-circle" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg=""><path fill="#007bff" d="M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628.001z"></path></svg><!-- <i class="fa color-text-cyan-40 fa-check-circle fs-18"></i> Font Awesome fontawesome.com -->
                             </span>
-                            <span class="ml-2 text-gray-100"><strong class=" text-left text-gray-200  mr-1">Unlimited</strong> projects</span>
+                            <span class="ml-2 text-gray-100 font-general-regular"><strong class=" text-left text-gray-200  mr-1">Unlimited</strong> projects</span>
                         </li>
                         <li class="flex mb-1">
                             <span class="fa-li">
                                 <svg class="svg-inline--fa fa-check-circle w-5 color-text-cyan-40 fs-18" aria-hidden="true" focusable="false" data-prefix="fa" data-icon="check-circle" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg=""><path fill="#007bff" d="M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628.001z"></path></svg><!-- <i class="fa color-text-cyan-40 fa-check-circle fs-18"></i> Font Awesome fontawesome.com -->
                             </span>
-                            <span class="ml-2 text-gray-100"><strong class="  mr-1">Unlimited</strong> users</span>
+                            <span class="ml-2 text-gray-100 font-general-regular"><strong class="  mr-1">Unlimited</strong> users</span>
                         </li>
                         <li class="flex mb-1">
                             <span class="fa-li">
                                 <svg class="svg-inline--fa fa-check-circle w-5 color-text-cyan-40 fs-18" aria-hidden="true" focusable="false" data-prefix="fa" data-icon="check-circle" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg=""><path fill="#007bff" d="M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628.001z"></path></svg><!-- <i class="fa color-text-cyan-40 fa-check-circle fs-18"></i> Font Awesome fontawesome.com -->
                             </span>
-                            <span class="ml-2 text-gray-100"><strong class=" text-left text-gray-200 mr-1">Unlimited</strong> spaces</span>
+                            <span class="ml-2 text-gray-100 font-general-regular"><strong class=" text-left text-gray-200 mr-1">Unlimited</strong> spaces</span>
                         </li>
                         <li class="flex mb-1">
                             <span class="fa-li">
                                 <svg class="svg-inline--fa fa-check-circle w-5 color-text-cyan-40 fs-18" aria-hidden="true" focusable="false" data-prefix="fa" data-icon="check-circle" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg=""><path fill="#007bff" d="M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628.001z"></path></svg><!-- <i class="fa color-text-cyan-40 fa-check-circle fs-18"></i> Font Awesome fontawesome.com -->
                             </span>
-                            <span class="ml-2 text-gray-100"><strong class=" text-left text-gray-200 mr-1">24/5</strong> support</span>
+                            <span class="ml-2 text-gray-100 font-general-regular"><strong class=" text-left text-gray-200 mr-1">24/5</strong> support</span>
                         </li>
                         <li class="server-only flex mb-1" style="display: none;">
                             <span class="fa-li">
                                 <svg class="svg-inline--fa fa-check-circle w-5 color-text-cyan-40 fs-18" aria-hidden="true" focusable="false" data-prefix="fa" data-icon="check-circle" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg=""><path fill="#007bff" d="M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628.001z"></path></svg><!-- <i class="fa color-text-cyan-40 fa-check-circle fs-18"></i> Font Awesome fontawesome.com -->
                             </span>
-                            <span>Up to <strong class="fw-500">3</strong> instances</span>
+                            <span class="ml-2 text-gray-100 font-general-regular">Up to <strong class="fw-500">3</strong> instances</span>
                         </li>
 
                     </ul>
@@ -250,12 +254,12 @@ export default {
                     <span>Start a trial</span>
                     <hover-button><svg class="hover-arrow" width="10" height="10" viewBox="0 0 10 10" aria-hidden="true" style="vertical-align: baseline; margin-left: 6px; transform: rotate(0deg)">
                               <g fill-rule="evenodd">
-                                <path class="hover-arrow-line" d="M0 5h7"></path>
+                                <path  class="hover-arrow-line" d="M0 5h7"></path>
                                 <path class="hover-arrow-tip" d="M1 1l4 4-4 4" style=""></path>
                               </g>
                             </svg></hover-button>
                 </a>
-                <p class="fs-12 mt-2 mb-0 text-muted">Free for 30 days. No credit card required.</p>
+                <p class="fs-12 mt-3 mb-0 text-gray-400">Free for 30 days. No credit card required.</p>
             </div>
         </div>
     </div>
@@ -275,8 +279,8 @@ export default {
                 </div>
                 <div class="card__price">
                     <div class="d-flex align-items-baseline mb-2">
-                        <h1 class="fw-400 mt-0 mb-0 mr-2">$18</h1>
-                        <p class="small mb-0 cloud-only">per <abbr>
+                        <h1 class="text-5xl text-gray-100 mt-0 font-general-regular mb-0 mr-2">$18</h1>
+                        <p class="text-sm  text-gray-300 pt-5 font-general-regular mb-0">per <abbr>
                             <a tabindex="0" href="#" class="clickable" data-container="body" data-toggle="popover" data-placement="right" onclick="void(0);" title="" data-content="Deployment targets are the Windows and Linux servers, Kubernetes Clusters, and cloud PaaS resources you deploy to. <a href='/pricing/faq#what-is-the-pricing-for-octopus-cloud'>Learn more</a>.<br/><br/>You will only be charged for the targets you use in your cloud instance." data-original-title="What are deployment targets?">target
                             </a></abbr>, per month
                         </p>
@@ -285,58 +289,58 @@ export default {
                             </a></abbr>, per month
                         </p>
                     </div>
-                        <p class="small text-muted cloud-only">Billed annually, 100 <abbr>
+                        <p class="text-sm text-left text-gray-200 mt-5 font-general-regular cloud-only">Billed annually, 100 <abbr>
                             <a tabindex="0" href="#" class="clickable" data-container="body" data-toggle="popover" data-placement="right" onclick="void(0);" title="" data-content="Deployment targets are the Windows and Linux servers, Kubernetes Clusters, and cloud PaaS resources you deploy to. <a href='/pricing/faq#what-is-the-pricing-for-octopus-cloud'>Learn more</a>.<br/><br/>You will only be charged for the targets you use in your cloud instance." data-original-title="What are deployment targets?">targets
                             </a></abbr> minimum
                         </p>
-                        <p class="small text-muted server-only" style="display: none;">Billed annually, 100 <abbr>
+                        <p class="text-sm text-left text-gray-200 mt-5 font-general-regular  server-only" style="display: none;">Billed annually, 100 <abbr>
                             <a tabindex="0" href="#" class="clickable" data-container="body" data-toggle="popover" data-placement="right" onclick="void(0);" title="" data-content="Deployment targets are the Windows and Linux servers, Kubernetes Clusters, and cloud PaaS resources you deploy to. <a href='/pricing/faq#what-is-the-pricing-for-octopus-server '>Learn more</a>.<br/><br/>You will only be charged for the targets you use in your server instance." data-original-title="What are deployment targets?">targets
                             </a></abbr> minimum
                         </p>
                 </div>
                 <div class="card__features">
-                    <ul class="fa-ul d-flex flex-column mt-3 ml-4" style="gap: var(--spacer-2);">
+                    <ul class="fa-ul flex flex-column mt-3" style="gap: var(--spacer-2);">
                         <li class="server-only" style="display: none;">
                             <span class="fa-li">
                                 <svg class="svg-inline--fa fa-check-circle w-5 color-text-cyan-40 fs-18" aria-hidden="true" focusable="false" data-prefix="fa" data-icon="check-circle" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg=""><path fill="#007bff" d="M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628.001z"></path></svg><!-- <i class="fa color-text-cyan-40 fa-check-circle fs-18"></i> Font Awesome fontawesome.com -->
                             </span>
                             <span>Advanced high availability</span>
                         </li>
-                        <li>
+                        <li class="flex mb-1">
                             <span class="fa-li">
                                 <svg class="svg-inline--fa fa-check-circle w-5 color-text-cyan-40 fs-18" aria-hidden="true" focusable="false" data-prefix="fa" data-icon="check-circle" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg=""><path fill="#007bff" d="M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628.001z"></path></svg><!-- <i class="fa color-text-cyan-40 fa-check-circle fs-18"></i> Font Awesome fontawesome.com -->
                             </span>
-                            <span>Insights &amp; DORA metrics</span>
+                            <span class="ml-2 text-gray-100 font-general-regular text-left">Insights &amp; DORA metrics</span>
                         </li>
-                        <li>
+                        <li class="flex mb-1">
                             <span class="fa-li">
                                 <svg class="svg-inline--fa fa-check-circle w-5 color-text-cyan-40 fs-18" aria-hidden="true" focusable="false" data-prefix="fa" data-icon="check-circle" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg=""><path fill="#007bff" d="M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628.001z"></path></svg><!-- <i class="fa color-text-cyan-40 fa-check-circle fs-18"></i> Font Awesome fontawesome.com -->
                             </span>
-                            <span>ServiceNow &amp; Jira Service Management integration</span>
+                            <span class="ml-2 text-gray-100 font-general-regular text-left">ServiceNow &amp; Jira Service Management integration</span>
                         </li>
                         <li class="server-only" style="display: none;">
                             <span class="fa-li">
                                 <svg class="svg-inline--fa fa-check-circle w-5 color-text-cyan-40 fs-18" aria-hidden="true" focusable="false" data-prefix="fa" data-icon="check-circle" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg=""><path fill="#007bff" d="M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628.001z"></path></svg><!-- <i class="fa color-text-cyan-40 fa-check-circle fs-18"></i> Font Awesome fontawesome.com -->
                             </span>
-                            <span><strong class="fw-500">Unlimited</strong> instances</span>
+                            <span class="ml-2 text-gray-100 font-general-regular"><strong class=" text-left text-gray-200 mr-1">Unlimited</strong> instances</span>
                         </li>
-                        <li>
+                        <li class="flex mb-1">
                             <span class="fa-li">
                                 <svg class="svg-inline--fa fa-check-circle w-5 color-text-cyan-40 fs-18" aria-hidden="true" focusable="false" data-prefix="fa" data-icon="check-circle" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg=""><path fill="#007bff" d="M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628.001z"></path></svg><!-- <i class="fa color-text-cyan-40 fa-check-circle fs-18"></i> Font Awesome fontawesome.com -->
                             </span>
-                            <span>24/7 support</span>
+                            <span class="ml-2 text-gray-100 font-general-regular">24/7 support</span>
                         </li>
-                        <li>
+                        <li class="flex mb-1">
                             <span class="fa-li">
                                 <svg class="svg-inline--fa fa-check-circle w-5 color-text-cyan-40 fs-18" aria-hidden="true" focusable="false" data-prefix="fa" data-icon="check-circle" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg=""><path fill="#007bff" d="M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628.001z"></path></svg><!-- <i class="fa color-text-cyan-40 fa-check-circle fs-18"></i> Font Awesome fontawesome.com -->
                             </span>
-                            <span>Customer Success Manager</span>
+                            <span class="ml-2 text-gray-100 font-general-regular">Customer Success Manager</span>
                         </li>
-                        <li>
+                        <li class="flex mb-1">
                             <span class="fa-li">
                                 <svg class="svg-inline--fa fa-check-circle w-5 color-text-cyan-40 fs-18" aria-hidden="true" focusable="false" data-prefix="fa" data-icon="check-circle" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg=""><path fill="#007bff" d="M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628.001z"></path></svg><!-- <i class="fa color-text-cyan-40 fa-check-circle fs-18"></i> Font Awesome fontawesome.com -->
                             </span>
-                            <span>Stream your Octopus audit logs to a SIEM provider</span>
+                            <span class="ml-2 text-gray-100 text-left font-general-regular">Stream your Octopus audit logs to a SIEM provider</span>
                         </li>
                     </ul>
                 </div>
@@ -346,8 +350,8 @@ export default {
                     <span>Contact sales</span>
                     <hover-button><svg class="hover-arrow" width="10" height="10" viewBox="0 0 10 10" aria-hidden="true" style="vertical-align: baseline; margin-left: 6px; transform: rotate(0deg)">
                               <g fill-rule="evenodd">
-                                <path class="hover-arrow-line" d="M0 5h7"></path>
-                                <path class="hover-arrow-tip" d="M1 1l4 4-4 4" style=""></path>
+                                <path fill="#ffffff" class="hover-arrow-line" d="M0 5h7"></path>
+                                <path fill="#ffffff" class="hover-arrow-tip" d="M1 1l4 4-4 4" style=""></path>
                               </g>
                             </svg></hover-button>
                 </a>
@@ -356,13 +360,24 @@ export default {
     </div>
 </div>
 </div>
+<div class="text-center mt-4">
+    <p class="fs-14 text-gray-400 text-sm">
+        Volume discounts are available above 500 targets, and temporary bursting for certain scenarios is supported.
+        <br><a class="contact" href="/company/contact">Contact sales</a> for details.
+    </p>
+</div>
 
-
-
-    <div v-if="activetab === '2'" class="grid grid-cols-1 sm:grid-cols-3  mt-10 sm:gap-20 ">
+    <!-- <div v-if="activetab === '2'" class="grid grid-cols-1 sm:grid-cols-3  mt-10 sm:gap-20 ">
       
 ggg
-    </div>
+    </div> -->
+</div>
+<wave-svg class="stripe-wave"><svg xmlns="http://www.w3.org/2000/svg" viewBox="-900 -100 900 50" preserveAspectRatio="none">
+                    <g transform="rotate(180, 0, 0) translate(0, 0)">
+                    <path d="M0,0V75c.5.5,94.5-25,250-25,144,0,254.3,49.5,400,50,137.5.5,250.5-24.5,250-25S899.5.5,900,0,92.5,0,0,0Z" fill="#0c1a24"></path>
+                    </g>
+                </svg>
+                </wave-svg>
   </div>
 </template>
 
@@ -463,6 +478,9 @@ border-top-width: 3px;
     cursor: pointer;
 } */
 .stripe.stripe-navy {
+    background: #0f2535;
+}
+.main-color{
     background: #0f2535;
 }
 .flex-container {
@@ -569,4 +587,54 @@ border-top-width: 3px;
     padding: 10px 40px;
     transition: background .25s,color .25s,filter .25s;
 }
+btn img, .btn svg {
+    display: inline-block;
+    max-height: 20px;
+}
+
+svg {
+    overflow: hidden;
+}
+.hover-arrow .hover-arrow-line {
+    stroke: transparent;
+    fill: none;
+    stroke-width: 2px;
+    transition: all .15s;
+}
+.fs-12, .fs-14 {
+    line-height: 1.5em;
+}
+
+.fs-12 {
+    font-size: 12px;
+}
+.pricing-card__footer {
+    margin-bottom: 26px;
+}
+.btn:not(.navbar-toggler).btn-secondary {
+    background: transparent;
+    border-color: #00ffa3;
+    color: #ffffff;
+}
+.btn:not(.navbar-toggler) {
+    border-radius: 36px;
+    border-width: 2px;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 22px;
+    padding: 10px 40px;
+    transition: background .25s,color .25s,filter .25s;
+}
+.contact{
+    color: #0d80d8 !important;
+}
+/* .contact:hover{ */
+    .contact:hover .hover-arrow-tip{
+        display: none;
+    }
+    .contact:hover .hover-arrow-tip{
+        display: block;
+    }
+
+/* } */
 </style>
