@@ -27,7 +27,7 @@ export default {
     >
     <router-link
       to="/"
-      class="font-general-medium block text-left text-lg font-medium sm:mx-3 md:mb-0 mb-2 sm:py-2 border-t-2 pt-3 sm:pt-2 sm:border-t-0 border-primary-light dark:border-secondary-dark"
+      class="font-general-medium block text-left text-lg font-medium text-dark sm:mx-3 md:mb-0 mb-2 sm:py-2"
       aria-label="About Us"
       >Docs</router-link
     >
