@@ -1,22 +1,18 @@
 <script>
 // import feather from 'feather-icons';
-// import VueHtml2pdf from 'vue-html2pdf'
-// import Download from '../files/Resume.pdf'
-// import LottiePlayer from 'lottie-player-vue';
-
+import { Vue3Lottie } from 'vue3-lottie'
+import 'vue3-lottie/dist/style.css'
 
 export default {
   components: {
-    // Download,
-    // VueHtml2pdf
-    // LottiePlayer
+    Vue3Lottie
   },
 
   name: "Home",
   data: () => {
     return {
       // theme: '',
-      link: 'https://www.octopus.com/octopus-public/animations/hero-cicd-pipeline-animation.json',
+      AstronautJSON: 'https://www.octopus.com/octopus-public/animations/hero-cicd-pipeline-animation.json',
     };
   },
   created() {
@@ -106,9 +102,8 @@ export default {
     </div>
     <!-- animation-container -->
     <div class="w-full my-10">
-      <!-- <LottiePlayer :src="link" autoplay="" loop="" speed="1" intermission="1" class=" hide-sm hide-xs hideOnMobile" style="margin-top: 0px;" background="transparent">
-    </LottiePlayer> -->
-      <div class="hideOnMobile">animation section</div>
+      <Vue3Lottie class="hideOnMobile" :animationData="AstronautJSON" :height="200" :width="200" />
+            <div class="hideOnMobile">animation section</div>
       <div class="hide">      
         <img
         src="@/assets/images/octupos/draft-home-hero-graphic-mobile.svg"

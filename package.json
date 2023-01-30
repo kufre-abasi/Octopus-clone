@@ -15,7 +15,6 @@
 		"core-js": "^3.6.5",
 		"emailjs-com": "^3.2.0",
 		"feather-icons": "^4.28.0",
-		"lottie-player-vue": "^0.0.16",
 		"postcss": "^8.4.21",
 		"postcss-flexbugs-fixes": "^5.0.2",
 		"postcss-import": "^14.0.2",
