@@ -2,17 +2,21 @@
 // import feather from 'feather-icons';
 // import VueHtml2pdf from 'vue-html2pdf'
 // import Download from '../files/Resume.pdf'
+// import LottiePlayer from 'lottie-player-vue';
+
 
 export default {
   components: {
     // Download,
     // VueHtml2pdf
+    // LottiePlayer
   },
 
   name: "Home",
   data: () => {
     return {
       // theme: '',
+      link: 'https://www.octopus.com/octopus-public/animations/hero-cicd-pipeline-animation.json',
     };
   },
   created() {
@@ -57,45 +61,54 @@ export default {
         tools.
       </p>
       </div>
-      <div class="justify-center  md:mx-64 mx-1 mt-10 items-center text-center block md:flex-col-2 md:col-gap-2  ">
-        <!-- <div class="justify-right items-right"> -->
+      <div class="button-group center   " style="flex-direction: row; ">
+    
+    
+
+
+    <a  class="btn primary btn-primary   " onclick="this.blur()" style="">
+    
+        Start a trial
+    
+    </a>
+        
+    
+    
+    <a href="/lp/schedule-a-demo" class="btn secondary btn-secondary   " onclick="this.blur()" style="">
+    
+        Schedule a demo
+    
+    </a>
+    
+    </div>
+      <!-- <div class="justify-center  md:mx-64 mx-1 mt-10 items-center text-center block md:flex md:flex-col-2 md:col-gap-2  ">
+        <div class="justify-right items-right">
           <a
           class=" mx-0 text-sm bg-accent-primary cry90 bttn "
           aria-label=""
           te
         >
-          <!-- <i
-            data-feather="arrow-down-circle"
-            class="ml-0 sm:ml-1 mr-2 sm:mr-3 w-5 sm:w-6 duration-100"
-          ></i> -->
           <span class="text-sm sm:text-lg font-general-medium duration-100">
             Start a trial</span
           ></a
         >
-        <!-- </div>
-        <div class="justify-left items-left"> -->
+        </div>
+        <div class="justify-left items-left">
           <a
         class="   text-sm text-gray-100 border-2 bttn "
         >
-          <!-- <i
-            data-feather="arrow-down-circle"
-            class="ml-0 sm:ml-1 mr-2 sm:mr-3 w-5 sm:w-6 duration-100"
-          ></i> -->
           <span class="text-sm sm:text-lg font-general-medium duration-100"
             >Schedule a Demo</span
           ></a
         >
-        <!-- </div> -->
-      </div>
+        </div>
+      </div> -->
     </div>
-    <div></div>
     <!-- animation-container -->
     <div class="w-full my-10">
-      <!-- <lottie-player src="https://octopus.com/octopus-public/animations/hero-cicd-pipeline-animation.json" autoplay="" loop="" speed="1" intermission="1" class=" hide-sm hide-xs " style="margin-top: 0px;" background="transparent">
-
-</lottie-player> -->
-
-      <div>animation section</div>
+      <!-- <LottiePlayer :src="link" autoplay="" loop="" speed="1" intermission="1" class=" hide-sm hide-xs hideOnMobile" style="margin-top: 0px;" background="transparent">
+    </LottiePlayer> -->
+      <div class="hideOnMobile">animation section</div>
       <div class="hide">      
         <img
         src="@/assets/images/octupos/draft-home-hero-graphic-mobile.svg"
@@ -108,6 +121,66 @@ export default {
 </template>
 
 <style scoped>
+
+.button-group.center, .flex-container-content.center {
+    align-items: center;
+    justify-content: center;
+}
+.button-group {
+    flex-wrap: wrap;
+    width: 100%;
+}
+.button-group, .flex-container-content {
+    display: flex;
+}
+.btn:not(.navbar-toggler).btn-primary {
+    color: var(--cyan90);
+    background: #00ffa3;
+    border-color: #00ffa3;
+}
+@media screen and (max-width: 577px){ 
+.button-group > .btn {
+    width: 100%;
+    margin: 9px 0px;
+}}
+.button-group > .btn {
+    margin: 16px 8px;
+}
+.btn:not(.navbar-toggler) {
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 22px;
+    border-radius: 36px;
+    border-width: 2px;
+    padding: 10px 40px;
+    transition: background 0.25s ease 0s, color 0.25s ease 0s, filter 0.25s ease 0s;
+}
+.btn:not(.navbar-toggler).btn-secondary {
+    color: #ffffff;
+    background: transparent;
+    border-color: #00ffa3;
+}
+@media screen and (max-width: 577px){ 
+.button-group > .btn {
+    width: 100%;
+    margin: 9px 0px;
+}}
+.button-group > .btn {
+    margin: 16px 8px;
+}
+.btn:not(.navbar-toggler) {
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 22px;
+    border-radius: 36px;
+    border-width: 2px;
+    padding: 10px 40px;
+    transition: background 0.25s ease 0s, color 0.25s ease 0s, filter 0.25s ease 0s;
+}
+
+
+
+
 @media screen and (max-width: 320px) {
   section {
     padding-top: 25px;
@@ -164,9 +237,22 @@ font-weight: 400;
 
 }
 .hide{
-display: none;
+display:none;
 }
-@media (min-width: 992px){
+.hideOnMobile{
+
+}
+@media only screen and (max-width: 489px){
+.hide{
+display: block;
+
+}
+.hideOnMobile{
+  display:none;
+}
+
+}
+@media  (min-width: 992px){
 .page-highlight.left {
     width: 578px;
 }}

@@ -253,6 +253,192 @@ Make any
         alt=""
       /> -->
     </div>
+
+    <!-- <div class="flex-container stripe   gradient-background">
+<div class="flex-container-content container   center" style="flex-direction: column; ">
+<header class="heading heading-center   " style="">
+<div class="eyebrow heading-center">
+<div class="gradient-border medium">
+<div class="eyebrow-heading">PRODUCT TOUR</div>
+</div>
+</div>
+<h2>How Octopus works</h2>
+</header>
+<div class="stripe product-highlights-grid" section-display-time-in-seconds="5">
+<div id="product-highlights" class="product-highlights">
+<div class="highlight-section selected" highlight-section="0">
+<div class="loading-bar">
+<div class="loading-bar-progress" style="--product-highlight-transition-time: 5s"></div>
+<div class="mobile-bubble"></div>
+</div>
+<div class="highlight-content">
+<div highlight-section-content="0" style="">
+<img class="icon" src="./Continuous delivery &amp; deployment automation tool for DevOps teams _ Octopus Deploy - Octopus Deploy_files/icon-release.svg" alt="icon release">
+</div>
+<h3 class="highlight-section-heading">
+Release
+</h3>
+<div class="highlight-section-content" highlight-section-content="0" style="">
+<p>Set once, deploy often. Configure your deployment steps, create a new release to snapshot the process, and use that process consistently across your environments.</p>
+<a href="https://octopus.com/docs/releases" class="underlined-arrow   " onclick="this.blur()" style="">
+Learn more
+<svg width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5.41999 0.915365L6.03044 0.291039C6.28892 0.0266849 6.70689 0.0266849 6.96262 0.291039L12.3082 5.7553C12.5667 6.01965 12.5667 6.44712 12.3082 6.70866L6.96262 12.1757C6.70414 12.4401 6.28617 12.4401 6.03044 12.1757L5.41999 11.5514C5.15876 11.2842 5.16426 10.8483 5.43099 10.5868L8.74449 7.3583H0.84159C0.475868 7.3583 0.181641 7.05739 0.181641 6.68335V5.78342C0.181641 5.40939 0.475868 5.10848 0.84159 5.10848H8.74449L5.43099 1.87998C5.16151 1.61844 5.15601 1.18253 5.41999 0.915365Z" fill="currentColor"></path></svg></a>
+<div class="highlight-image">
+<figure class="image-wrapper">
+<img class="  " style="" src="./Continuous delivery &amp; deployment automation tool for DevOps teams _ Octopus Deploy - Octopus Deploy_files/release-octopus-deploy.png" alt="">
+<figcaption></figcaption>
+</figure>
+</div>
+</div>
+</div>
+</div>
+<div class="highlight-section" highlight-section="1">
+<div class="loading-bar">
+<div class="loading-bar-progress" style="--product-highlight-transition-time: 5s"></div>
+<div class="mobile-bubble"></div>
+</div>
+<div class="highlight-content">
+<div highlight-section-content="1" style="display: none;">
+<img class="icon" src="./Continuous delivery &amp; deployment automation tool for DevOps teams _ Octopus Deploy - Octopus Deploy_files/icon-deploy.svg" alt="icon release">
+</div>
+<h3 class="highlight-section-heading">
+Deploy
+</h3>
+<div class="highlight-section-content" highlight-section-content="1" style="display: none;">
+<p>Octopus seamlessly connects to either side of your deployment pipeline to deliver software. Pull code from your build server or CI platform of choice and deploy anywhere, like the cloud, data centers, Kubernetes, or on-premises servers.</p>
+<a href="https://octopus.com/docs/deployments" class="underlined-arrow   " onclick="this.blur()" style="">
+Learn more
+<svg width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5.41999 0.915365L6.03044 0.291039C6.28892 0.0266849 6.70689 0.0266849 6.96262 0.291039L12.3082 5.7553C12.5667 6.01965 12.5667 6.44712 12.3082 6.70866L6.96262 12.1757C6.70414 12.4401 6.28617 12.4401 6.03044 12.1757L5.41999 11.5514C5.15876 11.2842 5.16426 10.8483 5.43099 10.5868L8.74449 7.3583H0.84159C0.475868 7.3583 0.181641 7.05739 0.181641 6.68335V5.78342C0.181641 5.40939 0.475868 5.10848 0.84159 5.10848H8.74449L5.43099 1.87998C5.16151 1.61844 5.15601 1.18253 5.41999 0.915365Z" fill="currentColor"></path></svg></a>
+<div class="highlight-image">
+<figure class="image-wrapper">
+<img class="  " style="" src="./Continuous delivery &amp; deployment automation tool for DevOps teams _ Octopus Deploy - Octopus Deploy_files/deploy-octopus-deploy.png" alt="">
+<figcaption></figcaption>
+</figure>
+ </div>
+</div>
+</div>
+</div>
+<div class="highlight-section" highlight-section="2">
+<div class="loading-bar">
+<div class="loading-bar-progress" style="--product-highlight-transition-time: 5s"></div>
+<div class="mobile-bubble"></div>
+</div>
+<div class="highlight-content">
+<div highlight-section-content="2" style="display: none;">
+<img class="icon" src="./Continuous delivery &amp; deployment automation tool for DevOps teams _ Octopus Deploy - Octopus Deploy_files/icon-configure.svg" alt="icon configure">
+</div>
+<h3 class="highlight-section-heading">
+Configure
+</h3>
+<div class="highlight-section-content" highlight-section-content="2" style="display: none;">
+<p>Set up deployments any way that suits you. Create processes with our easy-to-use UI and over 500 free step templates, or use command lines and scripts. Store deployment processes in Git with Config as Code and branch and merge in Octopus. Easily manage environment differences with scoped variables.</p>
+<a href="https://octopus.com/docs/projects" class="underlined-arrow   " onclick="this.blur()" style="">
+Learn more
+<svg width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5.41999 0.915365L6.03044 0.291039C6.28892 0.0266849 6.70689 0.0266849 6.96262 0.291039L12.3082 5.7553C12.5667 6.01965 12.5667 6.44712 12.3082 6.70866L6.96262 12.1757C6.70414 12.4401 6.28617 12.4401 6.03044 12.1757L5.41999 11.5514C5.15876 11.2842 5.16426 10.8483 5.43099 10.5868L8.74449 7.3583H0.84159C0.475868 7.3583 0.181641 7.05739 0.181641 6.68335V5.78342C0.181641 5.40939 0.475868 5.10848 0.84159 5.10848H8.74449L5.43099 1.87998C5.16151 1.61844 5.15601 1.18253 5.41999 0.915365Z" fill="currentColor"></path></svg></a>
+<div class="highlight-image">
+<figure class="image-wrapper">
+<img class="  " style="" src="./Continuous delivery &amp; deployment automation tool for DevOps teams _ Octopus Deploy - Octopus Deploy_files/configure.png" alt="Configuring Octopus Deploy">
+<figcaption></figcaption>
+</figure>
+</div>
+</div>
+</div>
+</div>
+<div class="highlight-section" highlight-section="3">
+<div class="loading-bar">
+<div class="loading-bar-progress" style="--product-highlight-transition-time: 5s"></div>
+<div class="mobile-bubble"></div>
+</div>
+<div class="highlight-content">
+<div highlight-section-content="3" style="display: none;">
+<img class="icon" src="./Continuous delivery &amp; deployment automation tool for DevOps teams _ Octopus Deploy - Octopus Deploy_files/icon-operate.svg" alt="icon operate">
+</div>
+<h3 class="highlight-section-heading">
+Operate
+</h3>
+<div class="highlight-section-content" highlight-section-content="3" style="display: none;">
+<p>Octopus Runbooks allows Operations teams to automate routine and emergency operations tasks. Manage tasks like infrastructure provisioning, database management, and website failover and restoration with one click.
+
+Set permissions so anyone on a team can start a runbook, freeing your Ops team from time-consuming, repetitive tasks.</p>
+<a href="https://octopus.com/docs/runbooks" class="underlined-arrow   " onclick="this.blur()" style="">
+Learn more
+<svg width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5.41999 0.915365L6.03044 0.291039C6.28892 0.0266849 6.70689 0.0266849 6.96262 0.291039L12.3082 5.7553C12.5667 6.01965 12.5667 6.44712 12.3082 6.70866L6.96262 12.1757C6.70414 12.4401 6.28617 12.4401 6.03044 12.1757L5.41999 11.5514C5.15876 11.2842 5.16426 10.8483 5.43099 10.5868L8.74449 7.3583H0.84159C0.475868 7.3583 0.181641 7.05739 0.181641 6.68335V5.78342C0.181641 5.40939 0.475868 5.10848 0.84159 5.10848H8.74449L5.43099 1.87998C5.16151 1.61844 5.15601 1.18253 5.41999 0.915365Z" fill="currentColor"></path></svg></a>
+<div class="highlight-image">
+<figure class="image-wrapper">
+<img class="  " style="" src="./Continuous delivery &amp; deployment automation tool for DevOps teams _ Octopus Deploy - Octopus Deploy_files/runbooks-3.png" alt="Octopus Deploy Runbooks">
+<figcaption></figcaption>
+</figure>
+</div>
+</div>
+</div>
+</div>
+<div class="highlight-section" highlight-section="4">
+<div class="loading-bar">
+<div class="loading-bar-progress" style="--product-highlight-transition-time: 5s"></div>
+<div class="mobile-bubble"></div>
+</div>
+<div class="highlight-content">
+<div highlight-section-content="4" style="display: none;">
+<img class="icon" src="./Continuous delivery &amp; deployment automation tool for DevOps teams _ Octopus Deploy - Octopus Deploy_files/icon-measure.svg" alt="icon measure">
+</div>
+<h3 class="highlight-section-heading">
+Measure
+</h3>
+<div class="highlight-section-content" highlight-section-content="4" style="display: none;">
+<p>Octopus's DevOps Insights uses DORA metrics to tell you exactly how you're performing so you can find areas for improvement in your deployment processes.</p>
+<a href="https://octopus.com/docs/insights" class="underlined-arrow   " onclick="this.blur()" style="">
+Learn more
+<svg width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5.41999 0.915365L6.03044 0.291039C6.28892 0.0266849 6.70689 0.0266849 6.96262 0.291039L12.3082 5.7553C12.5667 6.01965 12.5667 6.44712 12.3082 6.70866L6.96262 12.1757C6.70414 12.4401 6.28617 12.4401 6.03044 12.1757L5.41999 11.5514C5.15876 11.2842 5.16426 10.8483 5.43099 10.5868L8.74449 7.3583H0.84159C0.475868 7.3583 0.181641 7.05739 0.181641 6.68335V5.78342C0.181641 5.40939 0.475868 5.10848 0.84159 5.10848H8.74449L5.43099 1.87998C5.16151 1.61844 5.15601 1.18253 5.41999 0.915365Z" fill="currentColor"></path></svg></a>
+<div class="highlight-image">
+<figure class="image-wrapper">
+<img class="  " style="" src="./Continuous delivery &amp; deployment automation tool for DevOps teams _ Octopus Deploy - Octopus Deploy_files/measure-octopus-deploy.png" alt="">
+<figcaption></figcaption>
+</figure>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="highlight-section-image">
+<div highlight-section-image="0" class="highlight-image">
+<figure class="image-wrapper">
+<img class="  " style="" src="./Continuous delivery &amp; deployment automation tool for DevOps teams _ Octopus Deploy - Octopus Deploy_files/release-octopus-deploy.png" alt="">
+<figcaption></figcaption>
+</figure>
+</div>
+<div highlight-section-image="1" class="highlight-image hide-complete">
+<figure class="image-wrapper">
+<img class="  " style="" src="./Continuous delivery &amp; deployment automation tool for DevOps teams _ Octopus Deploy - Octopus Deploy_files/deploy-octopus-deploy.png" alt="">
+<figcaption></figcaption>
+</figure>
+</div>
+<div highlight-section-image="2" class="highlight-image hide-complete">
+<figure class="image-wrapper">
+<img class="  " style="" src="./Continuous delivery &amp; deployment automation tool for DevOps teams _ Octopus Deploy - Octopus Deploy_files/configure.png" alt="Configuring Octopus Deploy">
+<figcaption></figcaption>
+</figure>
+</div>
+<div highlight-section-image="3" class="highlight-image hide-complete">
+<figure class="image-wrapper">
+<img class="  " style="" src="./Continuous delivery &amp; deployment automation tool for DevOps teams _ Octopus Deploy - Octopus Deploy_files/runbooks-3.png" alt="Octopus Deploy Runbooks">
+<figcaption></figcaption>
+</figure>
+</div>
+<div highlight-section-image="4" class="highlight-image hide-complete">
+<figure class="image-wrapper">
+<img class="  " style="" src="./Continuous delivery &amp; deployment automation tool for DevOps teams _ Octopus Deploy - Octopus Deploy_files/measure-octopus-deploy.png" alt="">
+<figcaption></figcaption>
+</figure>
+</div>
+</div>
+</div>
+<script>
+    $(document).ready(() => {
+        window.createProductHighlight();
+    });
+</script>
+</div>
+</div> -->
   </div>
 </template>
 

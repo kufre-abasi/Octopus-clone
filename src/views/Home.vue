@@ -19,7 +19,7 @@ export default {
 </script>
 
 <template>
-  <div class="mx-8 md:mx-24">
+  <div class="mx-8 md:mx-24 bg-background-primary">
     <!-- Banner -->
     <AppBanner class="" />
 

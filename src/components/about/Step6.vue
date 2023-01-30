@@ -18,7 +18,7 @@ export default {
       headings: [
         {
           id: 1,
-          heading: "How Octopus works",
+          heading: "Plans for teams at any scale",
         },
       ],
       authorname: [
@@ -33,10 +33,10 @@ export default {
 </script>
 
 <template>
-  <div class="py-20 mt-40 px-8 md:px-24 gradient-background stripe flex-container">
+  <div class="py-20 mt-40 px-8 md:px-24 flex-container stripe   stripe-navy gradient-background stripe flex-container">
     <div class="eyebrow heading-center">
       <div class="gradient-border">
-        <div class="eyebrow-heading" alt="">PRODUCT TOUR</div>
+        <div class="eyebrow-heading" alt="">PRICING</div>
       </div>
     </div>
 
@@ -92,6 +92,18 @@ Make any
   .heading {
     height: 50%;
   }
+}
+.stripe.stripe-navy {
+    background: var(--navy);
+}
+.flex-container {
+    position: relative;
+}
+.stripe {
+    border: 0;
+    padding-bottom: 80px;
+    padding-top: 80px;
+    position: relative;
 }
 .border-b {
   border-bottom: solid 2px #022c0c;
