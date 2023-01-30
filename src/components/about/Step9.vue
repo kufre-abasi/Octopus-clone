@@ -41,7 +41,7 @@ export default {
 
 <template>
     <div class="   main-color ">
-  <div class="py-20 px-8 md:px-24 flex-container stripe   stripe-navy">
+  <div class="py-20 px-5 md:px-24 flex-container stripe   stripe-navy">
     <div class="eyebrow heading-center">
       <div class="gradient-border">
         <div class="eyebrow-heading" alt="">PRICING</div>

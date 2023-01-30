@@ -1,6 +1,6 @@
 <template>
     <div>
-        <div class="  p-24">
+        <div class=" p-5 md:p-24">
         <div class="" style="">
             <header class="heading heading-center   " style="">
 
@@ -140,11 +140,11 @@
 
 <!-- lass -->
 
-<div class="banner stripe horizon-gradient   " style="">
+<div class="banner stripe horizon-gradient  px-5 " style="">
     
 
 
-    <header class="heading heading-center max-w-580  ">
+    <header class="heading heading-center   ">
     
     
     <h2 class="font-general-medium text-3xl mb-2 text-gray-100">Get started with Octopus Deploy</h2>
@@ -236,6 +236,9 @@ export default {
 .button-group {
     flex-wrap: wrap;
     width: 100%;
+}
+.btn-secondary{
+    border-color: #00ffa3;
 }
 .btn:not(.navbar-toggler).btn-primary {
 
