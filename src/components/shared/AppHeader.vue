@@ -83,7 +83,7 @@ export default {
               src="@/assets/images/octupos/octopus_deploy_logo.png "
               alt=""
               class="logo"
-            /> <h1 class="font-general-semibold text-md text-gray-700 py-5">
+            /> <h1 class="font-general-semibold text-md text-gray-700 py-2 md:py-5">
               Octopus Deploy
             </h1>
           </router-link>
@@ -101,7 +101,7 @@ export default {
           <button
             @click="isOpen = !isOpen"
             type="button"
-            class="focus:outline-none Hamburger_Menu border-2 rounded-sm bg-gray-200"
+            class="focus:outline-none Hamburger_Menu border-2 p-1 bg-gray-200"
             aria-label="Hamburger Menu"
           >
             <svg
@@ -166,16 +166,18 @@ export default {
   @apply font-medium;
 }
 .logo {
-  width: 25%;
+  width: 21%;
+  height: 20%;
 }
 @media only screen and (max-width: 425px) {
   .logo {
-    width: 20%;
-    height: 20%;
+    width: 15%;
+    height: 15%;
   }
 }
 .Hamburger_Menu{
   color: rgba(0,0,0,.5);
   border-color: rgba(0,0,0,.1);
+  border-radius: 5px;
 }
 </style>
